@@ -19,31 +19,31 @@ class GoldenSetWriter:
     """Materialises rows to disk and emits a summary."""
 
     def __init__(self, golden_dir: Path, *, copy_files: bool) -> None:
-        self._golden_dir = golden_dir
-        self._images_dir = golden_dir / "images"
+        self._golden_dir = golden_dir.resolve()
+        self._images_dir = self._golden_dir / "images"
         self._copy_files = copy_files
+        self._golden_dir.mkdir(parents=True, exist_ok=True)
+        self._images_dir.mkdir(exist_ok=True)
 
     def write(self, rows: list[GoldenRow]) -> None:
         if not rows:
             log.error("No rows to write.")
             return
-        self._golden_dir.mkdir(parents=True, exist_ok=True)
-        self._images_dir.mkdir(exist_ok=True)
-
         self._write_csv(rows)
         self._write_jsonl(rows)
         self._write_summary(rows)
 
     def materialise_image(self, src: Path) -> Path:
+        src = src.resolve()
         img_id = GoldenRow.hash_id(src)
         dst = self._images_dir / f"{img_id}{src.suffix.lower()}"
-        if dst.exists():
+        if dst.exists() or dst.is_symlink():
             return dst
         if self._copy_files:
             shutil.copy2(src, dst)
             return dst
         try:
-            dst.symlink_to(src.resolve())
+            dst.symlink_to(src)
         except OSError:
             shutil.copy2(src, dst)
         return dst
