@@ -1,0 +1,20 @@
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+*.egg-info/
+build/
+dist/
+
+# Workspace artifacts — large datasets and outputs
+growz_eval_workspace/
+
+# Local secrets — never commit
+.env
+.env.*
+*.key
+*kaggle.json
+access_token

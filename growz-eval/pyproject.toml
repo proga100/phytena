@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "growz-eval"
+version = "0.2.0"
+description = "Build and verify a golden evaluation set for plant disease diagnosis."
+requires-python = ">=3.10"
+dependencies = [
+    "kaggle>=1.6,<3",
+    "google-genai>=2.0,<3",
+    "anthropic>=0.40,<1",
+    "tenacity>=8.2,<10",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4",
+    "ruff>=0.5",
+    "mypy>=1.10",
+]
+
+[project.scripts]
+growz-build = "growz_eval.cli.build:main"
+growz-verify = "growz_eval.cli.verify:main"
+
+[tool.setuptools.packages.find]
+include = ["growz_eval*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "SIM"]
+
+[tool.ruff.lint.per-file-ignores]
+"growz_eval/verification/prompts.py" = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
