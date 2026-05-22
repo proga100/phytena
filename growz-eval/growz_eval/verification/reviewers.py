@@ -6,6 +6,7 @@ import base64
 import json
 import os
 from abc import ABC, abstractmethod
+from io import BytesIO
 from pathlib import Path
 
 from growz_eval.config import CLAUDE_MODEL, GEMINI_MODEL
@@ -19,10 +20,56 @@ from growz_eval.verification.prompts import CLAUDE_PROMPT, GEMINI_PROMPT
 
 log = get_logger(__name__)
 
+MAX_GEMINI_INLINE_IMAGE_BYTES = 5 * 1024 * 1024
+MAX_GEMINI_IMAGE_SIDE = 1536
+NORMALIZED_JPEG_QUALITY = 90
+
 
 def _mime_for(path: Path) -> str:
     ext = path.suffix.lower().lstrip(".")
     return "image/jpeg" if ext in ("jpg", "jpeg") else f"image/{ext}"
+
+
+def _to_rgb(image):
+    from PIL import Image
+
+    if image.mode == "RGB":
+        return image
+    if image.mode in ("RGBA", "LA"):
+        background = image.convert("RGBA")
+        canvas = Image.new("RGBA", background.size, (255, 255, 255, 255))
+        canvas.alpha_composite(background)
+        return canvas.convert("RGB")
+    return image.convert("RGB")
+
+
+def _gemini_image_part(path: Path) -> tuple[bytes, str]:
+    original_bytes = path.read_bytes()
+    if path.stat().st_size <= MAX_GEMINI_INLINE_IMAGE_BYTES:
+        try:
+            from PIL import Image
+        except ImportError:
+            return original_bytes, _mime_for(path)
+
+        try:
+            with Image.open(path) as image:
+                if max(image.size) <= MAX_GEMINI_IMAGE_SIDE:
+                    return original_bytes, _mime_for(path)
+        except OSError:
+            return original_bytes, _mime_for(path)
+
+    try:
+        from PIL import Image, ImageOps
+    except ImportError as exc:
+        raise ReviewerError("Run: pip install pillow") from exc
+
+    with Image.open(path) as image:
+        image = ImageOps.exif_transpose(image)
+        image.thumbnail((MAX_GEMINI_IMAGE_SIDE, MAX_GEMINI_IMAGE_SIDE), Image.Resampling.LANCZOS)
+        image = _to_rgb(image)
+        buffer = BytesIO()
+        image.save(buffer, format="JPEG", quality=NORMALIZED_JPEG_QUALITY, optimize=True)
+        return buffer.getvalue(), "image/jpeg"
 
 
 def _strip_code_fences(text: str) -> str:
@@ -68,11 +115,11 @@ class GeminiApiReviewer(GeminiReviewer):
         prompt = GEMINI_PROMPT.format(crop=crop, dataset_label=dataset_label)
 
         try:
-            image_bytes = image_path.read_bytes()
+            image_bytes, mime_type = _gemini_image_part(image_path)
             response = client.models.generate_content(
                 model=self._model,
                 contents=[
-                    types.Part.from_bytes(data=image_bytes, mime_type=_mime_for(image_path)),
+                    types.Part.from_bytes(data=image_bytes, mime_type=mime_type),
                     prompt,
                 ],
                 config=types.GenerateContentConfig(
