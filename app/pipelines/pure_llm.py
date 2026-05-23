@@ -15,7 +15,7 @@ class PureLlmPipeline(Pipeline):
 
     async def run(self, request: QueryRequest) -> PipelineResponse:
         settings = get_settings()
-        if settings.llm_provider.lower() != "gemini" or not settings.gemini_api_key:
+        if settings.llm_provider.lower() not in ("gemini", "google") or not settings.gemini_api_key:
             return build_stub_answer(
                 pipeline=self.pipeline_id,
                 request=request,
