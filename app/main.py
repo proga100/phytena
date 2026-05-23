@@ -5,6 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from app.admin.routes import router as admin_router
 from app.config import Settings, get_settings
 from app.db import get_session
+from app.routes.eval import router as eval_router
 from app.routes.image import router as image_router
 from app.routes.query import router as query_router
 from app.routes.rag import router as rag_router
@@ -14,6 +15,7 @@ def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(title=settings.app_name)
     app.include_router(admin_router)
+    app.include_router(eval_router)
     app.include_router(image_router)
     app.include_router(query_router)
     app.include_router(rag_router)

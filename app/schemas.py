@@ -121,3 +121,27 @@ class RetrieveResponse(BaseModel):
     language_detected: str
     entities: dict[str, str | list[str]] = Field(default_factory=dict)
     candidates: list[RetrievalCandidate] = Field(default_factory=list)
+
+
+class EvalRunRequest(BaseModel):
+    limit: int | None = Field(default=None, ge=1, le=100)
+
+
+class EvalPipelineResultResponse(BaseModel):
+    pipeline: PipelineId
+    score: float
+    latency_ms: int
+    has_citations: bool
+    safety_flags: list[str] = Field(default_factory=list)
+
+
+class EvalCaseResultResponse(BaseModel):
+    case_id: str
+    question: str
+    pipeline_results: list[EvalPipelineResultResponse]
+
+
+class EvalRunResponse(BaseModel):
+    eval_run_id: UUID
+    cases: list[EvalCaseResultResponse]
+    summary: dict[str, dict[str, float]]
