@@ -41,7 +41,27 @@
       <section class="panel">
         <h1>{{ app_name }}</h1>
         <p>Prototype admin shell is running.</p>
-        <p>Next slices will add pipeline comparison, trace inspection, RAG chunks, evals, and human review.</p>
+        <form method="post" action="/admin/comparisons">
+          <label for="question">Question</label>
+          <textarea id="question" name="question" rows="4" required>Пшеница желтеет, нижние листья сохнут, что делать?</textarea>
+
+          <div class="grid">
+            <label>
+              Crop
+              <input name="crop" value="пшеница">
+            </label>
+            <label>
+              Region
+              <input name="region" value="Узбекистан">
+            </label>
+            <label>
+              Language
+              <input name="language" value="auto">
+            </label>
+          </div>
+
+          <button type="submit">Compare A/B/C</button>
+        </form>
         <p>Health: <code>/healthz</code> · Readiness: <code>/readyz</code> · System: <code>/v1/system</code></p>
       </section>
     </main>

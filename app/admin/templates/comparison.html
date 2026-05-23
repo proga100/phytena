@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pipeline Comparison</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        background: #f7f8fa;
+        color: #17202a;
+      }
+      main {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 32px 24px;
+      }
+      a {
+        color: #125c43;
+      }
+      .summary,
+      .card {
+        background: white;
+        border: 1px solid #e1e5ea;
+        border-radius: 8px;
+        padding: 18px;
+      }
+      .summary {
+        margin-bottom: 18px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+      }
+      h1 {
+        font-size: 26px;
+        margin: 0 0 12px;
+      }
+      h2 {
+        font-size: 18px;
+        margin: 0 0 10px;
+      }
+      pre {
+        background: #111827;
+        color: #e5e7eb;
+        border-radius: 6px;
+        overflow: auto;
+        padding: 12px;
+        font-size: 12px;
+      }
+      .answer {
+        line-height: 1.45;
+      }
+      .meta {
+        color: #536173;
+        font-size: 13px;
+      }
+      @media (max-width: 900px) {
+        .grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p><a href="/admin">Back to playground</a></p>
+      <section class="summary">
+        <h1>Pipeline Comparison</h1>
+        <p><strong>Question:</strong> {{ comparison.question }}</p>
+        <p class="meta">
+          Crop: {{ comparison.context.crop or "not provided" }} ·
+          Region: {{ comparison.context.region or "not provided" }} ·
+          Language: {{ comparison.context.language }}
+        </p>
+      </section>
+
+      <section class="grid">
+        {% for result in comparison.results %}
+          <article class="card">
+            <h2>{{ result.pipeline }}</h2>
+            <p class="meta">
+              Run: {{ result.run_id }}<br>
+              Confidence: {{ result.answer.confidence }} ·
+              Latency: {{ result.metrics.latency_ms }} ms ·
+              Cost: ${{ "%.4f"|format(result.metrics.estimated_cost_usd) }}
+            </p>
+            <div class="answer">{{ result.answer.answer }}</div>
+            <h3>Actions</h3>
+            <ul>
+              {% for action in result.answer.actions %}
+                <li>{{ action }}</li>
+              {% endfor %}
+            </ul>
+            <h3>Warnings</h3>
+            <ul>
+              {% for warning in result.answer.warnings %}
+                <li>{{ warning }}</li>
+              {% endfor %}
+            </ul>
+            <h3>Citations</h3>
+            <ul>
+              {% for citation in result.answer.citations %}
+                <li>{{ citation.title or citation.chunk_id }}{% if citation.section %}: {{ citation.section }}{% endif %}</li>
+              {% else %}
+                <li>No citations in this pipeline.</li>
+              {% endfor %}
+            </ul>
+            <h3>Trace Summary</h3>
+            <pre>{{ result.trace | tojson(indent=2) }}</pre>
+          </article>
+        {% endfor %}
+      </section>
+    </main>
+  </body>
+</html>

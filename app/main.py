@@ -1,19 +1,17 @@
-from fastapi import Depends, FastAPI, Request
-from fastapi.responses import HTMLResponse
-from fastapi.templating import Jinja2Templates
+from fastapi import Depends, FastAPI
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.admin.routes import router as admin_router
 from app.config import Settings, get_settings
 from app.db import get_session
 from app.routes.query import router as query_router
-
-templates = Jinja2Templates(directory="app/admin/templates")
 
 
 def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(title=settings.app_name)
+    app.include_router(admin_router)
     app.include_router(query_router)
 
     @app.get("/healthz")
@@ -31,14 +29,6 @@ def create_app() -> FastAPI:
             "app_env": settings.app_env,
             "embedding_dimension": settings.embedding_dimension,
         }
-
-    @app.get("/admin", response_class=HTMLResponse)
-    async def admin_home(request: Request) -> HTMLResponse:
-        return templates.TemplateResponse(
-            request,
-            "index.html",
-            {"app_name": settings.app_name},
-        )
 
     @app.get("/v1/system")
     async def system(settings: Settings = Depends(get_settings)) -> dict[str, str | int]:
