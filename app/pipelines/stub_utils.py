@@ -2,6 +2,8 @@ from time import perf_counter
 from typing import Any
 from uuid import uuid4
 
+from app.fusion.confidence import ConfidenceInputs, fuse_confidence
+from app.fusion.decisions import decide_response
 from app.schemas import AssistantAnswer, Diagnosis, PipelineId, PipelineMetrics, PipelineResponse, QueryRequest
 
 
@@ -35,6 +37,15 @@ def build_stub_answer(
     language = detect_language(request.question, request.context.language)
     normalized = normalize_to_russian(request.question, language)
     crop = request.context.crop or "не указано"
+    confidence_result = fuse_confidence(
+        ConfidenceInputs(
+            image_confidence=0.45 if confidence == "medium" else 0.3,
+            quality_status="warn",
+            rag_alignment="partial" if citations else "none",
+            context_match="match" if request.context.crop else "missing",
+        )
+    )
+    decision = decide_response(confidence_result.final_confidence, quality_status="warn")
 
     citation_list = []
     if citations:
@@ -59,6 +70,16 @@ def build_stub_answer(
             "enabled": pipeline != PipelineId.PURE_LLM,
             "reranker_enabled": reranked,
             "hits": citation_list,
+        },
+        "fusion": {
+            "image_confidence": confidence_result.image_confidence,
+            "quality_multiplier": confidence_result.quality_multiplier,
+            "rag_alignment_multiplier": confidence_result.rag_alignment_multiplier,
+            "context_multiplier": confidence_result.context_multiplier,
+            "final_confidence": confidence_result.final_confidence,
+            "decision": decision.type,
+            "allowed_recommendation_level": decision.allowed_recommendation_level,
+            "reason_codes": decision.reason_codes,
         },
         "safety": {
             "blocked_claims": [],
