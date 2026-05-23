@@ -4,6 +4,7 @@ from uuid import uuid4
 
 from app.fusion.confidence import ConfidenceInputs, fuse_confidence
 from app.fusion.decisions import decide_response
+from app.safety.validator import validate_answer_safety
 from app.schemas import AssistantAnswer, Diagnosis, PipelineId, PipelineMetrics, PipelineResponse, QueryRequest
 
 
@@ -58,36 +59,6 @@ def build_stub_answer(
             }
         ]
 
-    trace: dict[str, Any] = {
-        "query": {
-            "original": request.question,
-            "language_detected": language,
-            "normalized_ru": normalized,
-            "entities": {"crop": crop},
-        },
-        "pipeline": {"id": pipeline.value, "mode": "stub"},
-        "retrieval": {
-            "enabled": pipeline != PipelineId.PURE_LLM,
-            "reranker_enabled": reranked,
-            "hits": citation_list,
-        },
-        "fusion": {
-            "image_confidence": confidence_result.image_confidence,
-            "quality_multiplier": confidence_result.quality_multiplier,
-            "rag_alignment_multiplier": confidence_result.rag_alignment_multiplier,
-            "context_multiplier": confidence_result.context_multiplier,
-            "final_confidence": confidence_result.final_confidence,
-            "decision": decision.type,
-            "allowed_recommendation_level": decision.allowed_recommendation_level,
-            "reason_codes": decision.reason_codes,
-        },
-        "safety": {
-            "blocked_claims": [],
-            "requires_caveat": True,
-            "policy": "no unsupported pesticide dosage",
-        },
-    }
-
     answer = AssistantAnswer(
         diagnoses=[
             Diagnosis(
@@ -114,6 +85,43 @@ def build_stub_answer(
         clarification_question="Пришлите крупное фото пораженного листа при дневном свете.",
         escalate_to_agronomist=False,
     )
+    safety = validate_answer_safety(answer)
+
+    trace: dict[str, Any] = {
+        "query": {
+            "original": request.question,
+            "language_detected": language,
+            "normalized_ru": normalized,
+            "entities": {"crop": crop},
+        },
+        "pipeline": {"id": pipeline.value, "mode": "stub"},
+        "retrieval": {
+            "enabled": pipeline != PipelineId.PURE_LLM,
+            "reranker_enabled": reranked,
+            "hits": citation_list,
+        },
+        "fusion": {
+            "image_confidence": confidence_result.image_confidence,
+            "quality_multiplier": confidence_result.quality_multiplier,
+            "rag_alignment_multiplier": confidence_result.rag_alignment_multiplier,
+            "context_multiplier": confidence_result.context_multiplier,
+            "final_confidence": confidence_result.final_confidence,
+            "decision": decision.type,
+            "allowed_recommendation_level": decision.allowed_recommendation_level,
+            "reason_codes": decision.reason_codes,
+        },
+        "safety": {
+            "json_valid": safety.json_valid,
+            "has_citations": safety.has_citations,
+            "unsafe_pesticide_advice": safety.unsafe_pesticide_advice,
+            "unsupported_chemical_claim": safety.unsupported_chemical_claim,
+            "needs_agronomist": safety.needs_agronomist,
+            "flags": safety.flags,
+            "blocked_claims": safety.blocked_claims,
+            "requires_caveat": True,
+            "policy": "no unsupported pesticide dosage",
+        },
+    }
 
     elapsed_ms = int((perf_counter() - started) * 1000)
     return PipelineResponse(
