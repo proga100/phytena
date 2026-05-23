@@ -96,3 +96,28 @@ class ImageQualityResponse(BaseModel):
     status: str
     issues: list[str] = Field(default_factory=list)
     recommended_user_action: str | None = None
+
+
+class RetrieveRequest(BaseModel):
+    query: str = Field(min_length=1)
+    language: str = "auto"
+    top_k: int = Field(default=10, ge=1, le=50)
+
+
+class RetrievalCandidate(BaseModel):
+    chunk_id: str
+    title: str
+    text_preview: str
+    rrf_score: float
+    lexical_rank: int | None = None
+    vector_rank: int | None = None
+    reranker_score: float | None = None
+    included_in_prompt: bool = False
+
+
+class RetrieveResponse(BaseModel):
+    query: str
+    normalized_ru: str
+    language_detected: str
+    entities: dict[str, str | list[str]] = Field(default_factory=dict)
+    candidates: list[RetrievalCandidate] = Field(default_factory=list)

@@ -7,6 +7,7 @@ from app.config import Settings, get_settings
 from app.db import get_session
 from app.routes.image import router as image_router
 from app.routes.query import router as query_router
+from app.routes.rag import router as rag_router
 
 
 def create_app() -> FastAPI:
@@ -15,6 +16,7 @@ def create_app() -> FastAPI:
     app.include_router(admin_router)
     app.include_router(image_router)
     app.include_router(query_router)
+    app.include_router(rag_router)
 
     @app.get("/healthz")
     async def healthz() -> dict[str, str]:
