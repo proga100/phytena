@@ -1,19 +1,17 @@
 from time import perf_counter
 from uuid import uuid4
-from typing import Any
 
-from sqlalchemy.ext.asyncio import AsyncSession
-from sqlalchemy.ext.asyncio import create_async_engine
-from sqlalchemy.orm import sessionmaker
 
 from app.clients.gemini import GeminiClient, GeminiClientError
 from app.config import get_settings
-from app.llm.prompts import PIPELINE_B_PROMPT_VERSION, build_pipeline_b_prompt
+from app.llm.prompts import build_pipeline_b_prompt
 from app.logging import logger
 from app.pipelines.base import Pipeline
+from app.pipelines.image_guard import build_image_rejection_response
 from app.pipelines.stub_utils import build_stub_answer
 from app.rag.retrieve import retrieve
 from app.schemas import PipelineId, PipelineMetrics, PipelineResponse, QueryRequest
+from app.vision.input import prepare_image_input
 
 
 class HybridRagRerankPipeline(Pipeline):
@@ -23,15 +21,25 @@ class HybridRagRerankPipeline(Pipeline):
         logger.info(f"Running HybridRagRerankPipeline for question: {request.question[:50]}...")
         started = perf_counter()
         settings = get_settings()
+        image = prepare_image_input(request.image, request.image_mime_type)
+        if image.provided and not image.send_to_llm:
+            return build_image_rejection_response(
+                pipeline=self.pipeline_id,
+                image=image,
+                started=started,
+                return_trace=request.return_trace,
+            )
 
         if settings.llm_provider.lower() not in ("gemini", "google") or not settings.gemini_api_key:
             logger.warning("LLM provider not configured or API key missing.")
-            return build_stub_answer(
+            response = build_stub_answer(
                 pipeline=self.pipeline_id,
                 request=request,
                 confidence="low",
-                citations=False,
+                citations=True,
             )
+            response.trace["image"] = image.trace()
+            return response
 
         # 1. Retrieval (Fetch more candidates for reranking)
         from app.db import AsyncSessionLocal
@@ -74,7 +82,11 @@ class HybridRagRerankPipeline(Pipeline):
                 "Carefully evaluate ALL provided documents (up to 15 chunks). Filter out irrelevant noise, identify the most relevant facts, and answer the question"
             )
             
-            completion = await client.generate_structured_answer(final_prompt, image_b64=request.image)
+            completion = await client.generate_structured_answer(
+                final_prompt,
+                image_b64=request.image if image.send_to_llm else None,
+                image_mime_type=image.mime_type or "image/jpeg",
+            )
             logger.info(f"Rerank generation successful. Tokens: {completion.input_tokens}/{completion.output_tokens}")
             
         except GeminiClientError as exc:
@@ -93,6 +105,7 @@ class HybridRagRerankPipeline(Pipeline):
                 output_tokens=completion.output_tokens,
             ),
             trace={
+                "image": image.trace(),
                 "retrieval": retrieval_response.model_dump(),
                 "mode": "hybrid_rerank",
                 "reranker": "gemini-2.5-in-context",

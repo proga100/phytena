@@ -1,17 +1,17 @@
 from time import perf_counter
 from uuid import uuid4
 
-from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.clients.gemini import GeminiClient, GeminiClientError
 from app.config import get_settings
-from app.db import get_session
 from app.llm.prompts import PIPELINE_B_PROMPT_VERSION, build_pipeline_b_prompt
 from app.logging import logger
 from app.pipelines.base import Pipeline
+from app.pipelines.image_guard import build_image_rejection_response
 from app.pipelines.stub_utils import build_stub_answer
 from app.rag.retrieve import retrieve
 from app.schemas import PipelineId, PipelineMetrics, PipelineResponse, QueryRequest
+from app.vision.input import prepare_image_input
 
 
 class HybridRagPipeline(Pipeline):
@@ -20,16 +20,27 @@ class HybridRagPipeline(Pipeline):
     async def run(self, request: QueryRequest) -> PipelineResponse:
         logger.info(f"Running HybridRagPipeline for question: {request.question[:50]}...")
         settings = get_settings()
+        started = perf_counter()
+        image = prepare_image_input(request.image, request.image_mime_type)
+        if image.provided and not image.send_to_llm:
+            return build_image_rejection_response(
+                pipeline=self.pipeline_id,
+                image=image,
+                started=started,
+                return_trace=request.return_trace,
+            )
+
         if settings.llm_provider.lower() not in ("gemini", "google") or not settings.gemini_api_key:
             logger.warning("LLM provider not configured or API key missing.")
-            return build_stub_answer(
+            response = build_stub_answer(
                 pipeline=self.pipeline_id,
                 request=request,
                 confidence="low",
-                citations=False,
+                citations=True,
             )
+            response.trace["image"] = image.trace()
+            return response
 
-        started = perf_counter()
         # 1. Retrieval
         from app.db import AsyncSessionLocal
         
@@ -63,7 +74,11 @@ class HybridRagPipeline(Pipeline):
         client = GeminiClient(api_key=settings.gemini_api_key, model=settings.llm_model)
         
         try:
-            completion = await client.generate_structured_answer(prompt, image_b64=request.image)
+            completion = await client.generate_structured_answer(
+                prompt,
+                image_b64=request.image if image.send_to_llm else None,
+                image_mime_type=image.mime_type or "image/jpeg",
+            )
             logger.info(f"RAG generation successful. Tokens: {completion.input_tokens}/{completion.output_tokens}")
         except GeminiClientError as exc:
             logger.error(f"Gemini API Error in HybridRagPipeline: {str(exc)}")
@@ -81,6 +96,7 @@ class HybridRagPipeline(Pipeline):
                 output_tokens=completion.output_tokens,
             ),
             trace={
+                "image": image.trace(),
                 "retrieval": retrieval_response.model_dump(),
                 "prompt": prompt,
                 "model": settings.llm_model,

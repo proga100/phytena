@@ -20,6 +20,8 @@ class PipelineRunner:
                 question=request.question,
                 context=request.context,
                 pipeline=pipeline_id,
+                image=request.image,
+                image_mime_type=request.image_mime_type,
                 return_trace=request.return_trace,
             )
             results.append(await self.run_one(query_request))

@@ -1,3 +1,5 @@
+import json
+
 import httpx
 import pytest
 
@@ -6,7 +8,10 @@ from app.clients.gemini import GeminiClient
 
 @pytest.mark.asyncio
 async def test_gemini_client_parses_structured_answer() -> None:
+    captured_payload = {}
+
     def handler(request: httpx.Request) -> httpx.Response:
+        captured_payload.update(json.loads(request.content.decode("utf-8")))
         return httpx.Response(
             200,
             json={
@@ -47,8 +52,14 @@ async def test_gemini_client_parses_structured_answer() -> None:
     transport = httpx.MockTransport(handler)
     async with httpx.AsyncClient(transport=transport) as http_client:
         client = GeminiClient(api_key="test", model="gemini-test", http_client=http_client)
-        completion = await client.generate_structured_answer("prompt")
+        completion = await client.generate_structured_answer(
+            "prompt",
+            image_b64="abc123",
+            image_mime_type="image/png",
+        )
 
     assert completion.answer.confidence == "low"
     assert completion.input_tokens == 10
     assert completion.output_tokens == 20
+    inline_data = captured_payload["contents"][0]["parts"][1]["inline_data"]
+    assert inline_data == {"mime_type": "image/png", "data": "abc123"}

@@ -274,6 +274,7 @@
           pipeline: pipelineId,
           context: { crop, region },
           image: imageB64,
+          image_mime_type: imageFile ? imageFile.type : null,
           return_trace: true
         };
 

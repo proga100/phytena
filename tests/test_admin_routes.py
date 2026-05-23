@@ -8,7 +8,7 @@ def test_admin_home_loads() -> None:
     response = client.get("/admin")
 
     assert response.status_code == 200
-    assert "Compare A/B/C" in response.text
+    assert "Phytena Lab" in response.text
 
 
 def test_admin_comparison_runs_all_pipelines() -> None:

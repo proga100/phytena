@@ -27,9 +27,11 @@ async def create_comparison(
     runner: PipelineRunner = Depends(get_pipeline_runner),
 ) -> HTMLResponse:
     image_b64 = None
+    image_mime_type = None
     if image and image.filename:
         content = await image.read()
         image_b64 = base64.b64encode(content).decode("utf-8")
+        image_mime_type = image.content_type
 
     comparison = await runner.compare(
         CompareRequest(
@@ -40,6 +42,7 @@ async def create_comparison(
                 language=language or "auto",
             ),
             image=image_b64,
+            image_mime_type=image_mime_type,
         )
     )
     return templates.TemplateResponse(request, "comparison.html", {"comparison": comparison})

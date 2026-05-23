@@ -39,7 +39,10 @@ class GeminiClient:
         self.http_client = http_client
 
     async def generate_structured_answer(
-        self, prompt: str, image_b64: str | None = None
+        self,
+        prompt: str,
+        image_b64: str | None = None,
+        image_mime_type: str = "image/jpeg",
     ) -> GeminiCompletion:
         logger.info(f"Requesting Gemini model: {self.model}")
         url = (
@@ -51,7 +54,7 @@ class GeminiClient:
             parts.append(
                 {
                     "inline_data": {
-                        "mime_type": "image/jpeg",  # Assume JPEG for base64 from admin
+                        "mime_type": image_mime_type,
                         "data": image_b64,
                     }
                 }

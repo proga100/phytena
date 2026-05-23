@@ -1,12 +1,10 @@
 from fastapi import APIRouter, File, HTTPException, UploadFile
 
 from app.schemas import ImageQualityResponse
+from app.vision.input import ALLOWED_IMAGE_TYPES, MAX_IMAGE_BYTES
 from app.vision.quality import assess_image_quality
 
 router = APIRouter(prefix="/v1/image", tags=["image"])
-
-ALLOWED_IMAGE_TYPES = {"image/jpeg", "image/png", "image/webp"}
-MAX_IMAGE_BYTES = 10 * 1024 * 1024
 
 
 @router.post("/quality-check", response_model=ImageQualityResponse)

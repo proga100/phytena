@@ -36,3 +36,23 @@ def test_compare_returns_all_default_pipelines() -> None:
         "C_HYBRID_RAG_RERANK",
     ]
     assert payload["results"][0]["trace"]["query"]["language_detected"] == "uz_latn"
+
+
+def test_compare_propagates_image_to_all_pipelines() -> None:
+    client = TestClient(app)
+    response = client.post(
+        "/v1/query/compare",
+        json={
+            "question": "Что с растением?",
+            "image": "not-base64",
+            "image_mime_type": "image/jpeg",
+        },
+    )
+
+    assert response.status_code == 200
+    payload = response.json()
+    for result in payload["results"]:
+        assert result["trace"]["pipeline"]["mode"] == "image_rejected"
+        assert result["trace"]["image"]["provided"] is True
+        assert result["trace"]["image"]["sent_to_gemini"] is False
+        assert result["trace"]["image"]["rejection_reason"] == "invalid_base64_image"

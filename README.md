@@ -181,10 +181,19 @@ docker compose up --build -d
 Pipeline A will then use Gemini:
 
 ```text
-question -> Gemini -> strict JSON -> Pydantic validation -> safety validation -> trace
+question + optional image -> image validation -> quality check -> Gemini -> strict JSON -> Pydantic validation -> safety validation -> trace
 ```
 
 If the key is missing or Gemini fails, Pipeline A returns the safe stub response and records the fallback in trace metadata.
+
+All pipelines use the same image preflight contract before any LLM call:
+
+- supported MIME types: `image/jpeg`, `image/png`, `image/webp`;
+- max payload size: 10 MB after base64 decoding;
+- base64 validation before model calls;
+- local image quality check using resolution, blur, and exposure;
+- `fail` quality images are not sent to Gemini;
+- `pass` and `warn` images are sent to Gemini with the correct `image_mime_type`.
 
 Run one pipeline:
 
@@ -202,6 +211,27 @@ curl -X POST http://127.0.0.1:8000/v1/query \
   }'
 ```
 
+Run one pipeline with an image:
+
+```bash
+IMG=$(base64 -i /path/to/photo.jpg | tr -d '\n')
+
+curl -X POST http://127.0.0.1:8000/v1/query \
+  -H "Content-Type: application/json" \
+  -d "{
+    \"question\": \"Пшеница желтеет, нижние листья сохнут, что делать?\",
+    \"pipeline\": \"A_PURE_LLM\",
+    \"context\": {
+      \"crop\": \"пшеница\",
+      \"region\": \"Узбекистан\",
+      \"language\": \"ru\"
+    },
+    \"image\": \"$IMG\",
+    \"image_mime_type\": \"image/jpeg\",
+    \"return_trace\": true
+  }"
+```
+
 Compare all default pipelines:
 
 ```bash
@@ -211,6 +241,8 @@ curl -X POST http://127.0.0.1:8000/v1/query/compare \
     "question": "Пшеница желтеет, нижние листья сохнут, что делать?"
   }'
 ```
+
+`/v1/query/compare` propagates the same `image` and `image_mime_type` to A/B/C, so the architecture comparison uses the same visual evidence for every pipeline.
 
 Pipeline IDs:
 
@@ -256,6 +288,28 @@ The endpoint returns:
 - quality score;
 - status: `pass`, `warn`, or `fail`;
 - issues and retake guidance.
+
+Pipeline trace includes the same image metadata:
+
+```json
+{
+  "image": {
+    "provided": true,
+    "valid": true,
+    "mime_type": "image/jpeg",
+    "size_bytes": 246276,
+    "quality": {
+      "status": "pass",
+      "quality_score": 1.0,
+      "issues": []
+    },
+    "sent_to_gemini": true,
+    "rejection_reason": null
+  }
+}
+```
+
+If the image is invalid, too large, unreadable, unsupported, or fails quality checks, `sent_to_gemini` is `false` and `rejection_reason` explains why.
 
 ### Evaluation
 

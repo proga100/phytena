@@ -1,6 +1,5 @@
 import logging
 import sys
-from typing import Any
 
 def setup_logging():
     logger = logging.getLogger("app")
