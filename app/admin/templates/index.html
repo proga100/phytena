@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ app_name }}</title>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        margin: 0;
+        background: #f7f8fa;
+        color: #17202a;
+      }
+      main {
+        max-width: 960px;
+        margin: 0 auto;
+        padding: 48px 24px;
+      }
+      .panel {
+        background: white;
+        border: 1px solid #e1e5ea;
+        border-radius: 8px;
+        padding: 24px;
+      }
+      h1 {
+        font-size: 28px;
+        margin: 0 0 12px;
+      }
+      p {
+        line-height: 1.5;
+      }
+      code {
+        background: #eef1f5;
+        border-radius: 4px;
+        padding: 2px 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="panel">
+        <h1>{{ app_name }}</h1>
+        <p>Prototype admin shell is running.</p>
+        <p>Next slices will add pipeline comparison, trace inspection, RAG chunks, evals, and human review.</p>
+        <p>Health: <code>/healthz</code> · Readiness: <code>/readyz</code> · System: <code>/v1/system</code></p>
+      </section>
+    </main>
+  </body>
+</html>
