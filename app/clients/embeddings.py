@@ -12,7 +12,7 @@ class EmbeddingsClient:
         self,
         *,
         api_key: str,
-        model: str = "text-embedding-004",
+        model: str = "gemini-embedding-2",
         timeout_seconds: float = 30.0,
         http_client: httpx.AsyncClient | None = None,
     ) -> None:
@@ -21,7 +21,7 @@ class EmbeddingsClient:
         self.timeout_seconds = timeout_seconds
         self.http_client = http_client
 
-    async def get_embedding(self, text: str, task_type: str = "RETRIEVAL_DOCUMENT") -> list[float]:
+    async def get_embedding(self, text: str, task_type: str = "RETRIEVAL_DOCUMENT", output_dimensionality: int | None = None) -> list[float]:
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:embedContent"
@@ -31,6 +31,9 @@ class EmbeddingsClient:
             "content": {"parts": [{"text": text}]},
             "taskType": task_type,
         }
+        if output_dimensionality:
+            payload["outputDimensionality"] = output_dimensionality
+        
         params = {"key": self.api_key}
 
         if self.http_client is not None:
@@ -49,7 +52,7 @@ class EmbeddingsClient:
         
         return [float(v) for v in embedding]
 
-    async def get_embeddings_batch(self, texts: list[str], task_type: str = "RETRIEVAL_DOCUMENT") -> list[list[float]]:
+    async def get_embeddings_batch(self, texts: list[str], task_type: str = "RETRIEVAL_DOCUMENT", output_dimensionality: int | None = None) -> list[list[float]]:
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:batchEmbedContents"
@@ -62,6 +65,10 @@ class EmbeddingsClient:
             }
             for text in texts
         ]
+        if output_dimensionality:
+            for req in requests:
+                req["outputDimensionality"] = output_dimensionality
+
         payload = {"requests": requests}
         params = {"key": self.api_key}
 

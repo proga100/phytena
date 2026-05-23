@@ -16,7 +16,7 @@ down_revision: str | None = None
 branch_labels: str | Sequence[str] | None = None
 depends_on: str | Sequence[str] | None = None
 
-EMBEDDING_DIMENSION = 1024
+EMBEDDING_DIMENSION = 768
 
 
 def upgrade() -> None:

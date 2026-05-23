@@ -58,9 +58,10 @@ async def ingest_file(file_path: Path, crop: str | None = None, topic: str | Non
             await session.flush()
 
             # 3. Process Chunks
-            print("Generating embeddings and saving chunks...")
+            print(f"Generating embeddings using {settings.embeddings_model} with target dim {settings.embedding_dimension}...")
             for i, p in enumerate(paragraphs):
-                embedding = await embed_client.get_embedding(p)
+                embedding = await embed_client.get_embedding(p, output_dimensionality=settings.embedding_dimension)
+                print(f"Chunk {i} embedding len: {len(embedding)}")
                 chunk = KbChunk(
                     document_id=doc.id,
                     source_id=source.id,
