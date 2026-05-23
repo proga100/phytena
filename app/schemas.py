@@ -83,3 +83,16 @@ class CompareResponse(BaseModel):
     question: str
     context: QueryContext
     results: list[PipelineResponse]
+
+
+class ImageQualityResponse(BaseModel):
+    width: int
+    height: int
+    normalized_width: int
+    normalized_height: int
+    blur_score: float
+    exposure_score: float
+    quality_score: float
+    status: str
+    issues: list[str] = Field(default_factory=list)
+    recommended_user_action: str | None = None
