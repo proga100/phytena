@@ -24,7 +24,7 @@ async def retrieve(
         output_dimensionality=settings.embedding_dimension
     )
 
-    # Vector Query using pgvector
+    # Vector Query using pgvector (using <=> for cosine distance)
     vector_stmt = text("""
         SELECT id, 1 - (embedding <=> :query_vector) as score
         FROM kb_chunks
@@ -32,7 +32,7 @@ async def retrieve(
         LIMIT :limit
     """)
     
-    # Lexical Query (FTS)
+    # Lexical Query (FTS) - use plainto_tsquery for simple phrases
     lexical_stmt = text("""
         SELECT id, ts_rank_cd(fts_ru, plainto_tsquery('russian', :query_text)) as score
         FROM kb_chunks
@@ -41,13 +41,22 @@ async def retrieve(
         LIMIT :limit
     """)
 
-    vector_results = await db.execute(vector_stmt, {"query_vector": str(query_vector), "limit": top_k * 2})
-    lexical_results = await db.execute(lexical_stmt, {"query_text": normalized.normalized_ru, "limit": top_k * 2})
+    # Execute searches. Note: query_vector should be passed as a list of floats.
+    try:
+        vector_results = await db.execute(vector_stmt, {"query_vector": query_vector, "limit": top_k * 2})
+        vector_candidates = [
+            RankedCandidate(str(row[0]), i + 1, float(row[1])) 
+            for i, row in enumerate(vector_results)
+        ]
+    except Exception:
+        # Fallback to string representation if list fails
+        vector_results = await db.execute(vector_stmt, {"query_vector": str(query_vector), "limit": top_k * 2})
+        vector_candidates = [
+            RankedCandidate(str(row[0]), i + 1, float(row[1])) 
+            for i, row in enumerate(vector_results)
+        ]
 
-    vector_candidates = [
-        RankedCandidate(str(row[0]), i + 1, float(row[1])) 
-        for i, row in enumerate(vector_results)
-    ]
+    lexical_results = await db.execute(lexical_stmt, {"query_text": normalized.normalized_ru, "limit": top_k * 2})
     lexical_candidates = [
         RankedCandidate(str(row[0]), i + 1, float(row[1])) 
         for i, row in enumerate(lexical_results)
@@ -56,17 +65,34 @@ async def retrieve(
     # 2. RRF Fusion
     merged = reciprocal_rank_fusion({"lexical": lexical_candidates, "vector": vector_candidates})[:top_k]
 
-    # 3. Fetch full text for candidates
+    # 3. Fetch full text for candidates in one go
+    if not merged:
+        return RetrieveResponse(
+            query=query,
+            normalized_ru=normalized.normalized_ru,
+            language_detected=normalized.language_detected,
+            entities=normalized.entities,
+            candidates=[],
+        )
+
+    chunk_ids = [m.chunk_id for m in merged]
+    chunk_stmt = text("SELECT id, text_ru, section_title, crop FROM kb_chunks WHERE id = ANY(:ids)")
+    # Convert string IDs back to UUIDs
+    import uuid
+    uuid_ids = [uuid.UUID(cid) for cid in chunk_ids]
+    
+    chunk_rows = await db.execute(chunk_stmt, {"ids": uuid_ids})
+    chunk_map = {str(row[0]): row for row in chunk_rows}
+
     final_candidates = []
     for m in merged:
-        chunk_stmt = text("SELECT text_ru, section_title, crop FROM kb_chunks WHERE id = :id")
-        chunk_data = (await db.execute(chunk_stmt, {"id": m.chunk_id})).first()
+        chunk_data = chunk_map.get(m.chunk_id)
         if chunk_data:
             final_candidates.append(
                 RetrievalCandidate(
                     chunk_id=m.chunk_id,
-                    title=f"{chunk_data[2] or 'Общее'}: {chunk_data[1] or 'Раздел'}",
-                    text_preview=chunk_data[0],
+                    title=f"{chunk_data[3] or 'Общее'}: {chunk_data[2] or 'Раздел'}",
+                    text_preview=chunk_data[1],
                     rrf_score=round(m.rrf_score, 6),
                     lexical_rank=m.ranks.get("lexical"),
                     vector_rank=m.ranks.get("vector"),

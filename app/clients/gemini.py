@@ -9,7 +9,7 @@ import httpx
 from pydantic import ValidationError
 
 from app.schemas import AssistantAnswer
-
+from app.logging import logger
 
 class GeminiClientError(RuntimeError):
     pass
@@ -41,6 +41,7 @@ class GeminiClient:
     async def generate_structured_answer(
         self, prompt: str, image_b64: str | None = None
     ) -> GeminiCompletion:
+        logger.info(f"Requesting Gemini model: {self.model}")
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:generateContent"
@@ -72,7 +73,8 @@ class GeminiClient:
                 response = await client.post(url, params=params, json=payload)
 
         if response.status_code >= 400:
-            raise GeminiClientError(f"Gemini API returned HTTP {response.status_code}")
+            logger.error(f"Gemini API HTTP Error {response.status_code}: {response.text}")
+            raise GeminiClientError(f"Gemini API returned HTTP {response.status_code}: {response.text}")
 
         data = response.json()
         raw_text = _extract_text(data)
@@ -104,7 +106,7 @@ def _parse_answer(raw_text: str) -> AssistantAnswer:
     try:
         return AssistantAnswer.model_validate_json(json_text)
     except ValidationError as exc:
-        raise GeminiClientError("Gemini response did not match AssistantAnswer schema.") from exc
+        raise GeminiClientError(f"Gemini response did not match AssistantAnswer schema: {str(exc)}") from exc
 
 
 def _extract_json_object(text: str) -> str:
@@ -117,5 +119,8 @@ def _extract_json_object(text: str) -> str:
     match = re.search(r"\{.*\}", stripped, flags=re.DOTALL)
     if not match:
         raise GeminiClientError("Gemini response did not contain a JSON object.")
-    json.loads(match.group(0))
+    try:
+        json.loads(match.group(0))
+    except json.JSONDecodeError as exc:
+        raise GeminiClientError(f"Found something like JSON but it's invalid: {str(exc)}") from exc
     return match.group(0)

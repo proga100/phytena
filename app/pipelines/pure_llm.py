@@ -4,6 +4,7 @@ from uuid import uuid4
 from app.clients.gemini import GeminiClient, GeminiClientError
 from app.config import get_settings
 from app.llm.prompts import PIPELINE_A_PROMPT_VERSION, build_pipeline_a_prompt
+from app.logging import logger
 from app.pipelines.base import Pipeline
 from app.pipelines.stub_utils import build_stub_answer
 from app.safety.validator import validate_answer_safety
@@ -14,8 +15,10 @@ class PureLlmPipeline(Pipeline):
     pipeline_id = PipelineId.PURE_LLM
 
     async def run(self, request: QueryRequest) -> PipelineResponse:
+        logger.info(f"Running PureLlmPipeline for question: {request.question[:50]}...")
         settings = get_settings()
         if settings.llm_provider.lower() not in ("gemini", "google") or not settings.gemini_api_key:
+            logger.warning("LLM provider not configured or API key missing, falling back to stub.")
             return build_stub_answer(
                 pipeline=self.pipeline_id,
                 request=request,
@@ -28,7 +31,9 @@ class PureLlmPipeline(Pipeline):
         client = GeminiClient(api_key=settings.gemini_api_key, model=settings.llm_model)
         try:
             completion = await client.generate_structured_answer(prompt, image_b64=request.image)
+            logger.info(f"LLM call successful. Tokens: {completion.input_tokens}/{completion.output_tokens}")
         except GeminiClientError as exc:
+            logger.error(f"Gemini API Error in PureLlmPipeline: {str(exc)}")
             fallback = build_stub_answer(
                 pipeline=self.pipeline_id,
                 request=request,

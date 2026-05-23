@@ -3,6 +3,7 @@ from __future__ import annotations
 from typing import Any
 
 import httpx
+from app.logging import logger
 
 class EmbeddingsClientError(RuntimeError):
     pass
@@ -22,6 +23,7 @@ class EmbeddingsClient:
         self.http_client = http_client
 
     async def get_embedding(self, text: str, task_type: str = "RETRIEVAL_DOCUMENT", output_dimensionality: int | None = None) -> list[float]:
+        logger.info(f"Requesting embedding for text (len: {len(text)}) using {self.model}")
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:embedContent"
@@ -43,6 +45,7 @@ class EmbeddingsClient:
                 response = await client.post(url, params=params, json=payload)
 
         if response.status_code >= 400:
+            logger.error(f"Google Embeddings API HTTP Error {response.status_code}: {response.text}")
             raise EmbeddingsClientError(f"Google Embeddings API returned HTTP {response.status_code}: {response.text}")
 
         data = response.json()
@@ -53,6 +56,7 @@ class EmbeddingsClient:
         return [float(v) for v in embedding]
 
     async def get_embeddings_batch(self, texts: list[str], task_type: str = "RETRIEVAL_DOCUMENT", output_dimensionality: int | None = None) -> list[list[float]]:
+        logger.info(f"Requesting batch embedding for {len(texts)} texts using {self.model}")
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:batchEmbedContents"
@@ -79,6 +83,7 @@ class EmbeddingsClient:
                 response = await client.post(url, params=params, json=payload)
 
         if response.status_code >= 400:
+            logger.error(f"Google Embeddings API HTTP Error {response.status_code}: {response.text}")
             raise EmbeddingsClientError(f"Google Embeddings API returned HTTP {response.status_code}: {response.text}")
 
         data = response.json()

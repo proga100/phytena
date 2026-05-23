@@ -284,15 +284,41 @@
             body: JSON.stringify(payload)
           });
 
-          if (!response.ok) throw new Error('API Error');
+          if (!response.ok) {
+            const errorData = await response.json().catch(() => ({}));
+            const message = errorData.message || errorData.detail || response.statusText || 'Unknown Error';
+            const type = errorData.type ? `(${errorData.type})` : '';
+            throw new Error(`${message} ${type}`);
+          }
           
           const result = await response.json();
           renderResult(result);
         } catch (err) {
-          alert('Error: ' + err.message);
+          renderError(pipelineId, err.message);
         } finally {
           loader.style.display = 'none';
         }
+      }
+
+      function renderError(pipelineId, message) {
+        const list = document.getElementById('results-list');
+        const card = document.createElement('div');
+        card.className = 'result-card';
+        card.style.borderLeft = '4px solid var(--danger-color)';
+        
+        card.innerHTML = `
+          <div style="margin-bottom: 12px;">
+            <span class="badge" style="background: rgba(255, 59, 48, 0.1); color: var(--danger-color);">${pipelineId}</span>
+            <h2 style="margin: 8px 0 0; font-size: 18px; color: var(--danger-color);">Pipeline Execution Failed</h2>
+          </div>
+          <p style="font-size: 15px; line-height: 1.4; color: var(--text-primary); font-family: monospace; background: #fff5f5; padding: 12px; border-radius: 8px;">
+            ${message}
+          </p>
+          <p style="font-size: 13px; color: var(--text-secondary); margin-top: 12px;">
+            Please check the system logs for more details or try again later.
+          </p>
+        `;
+        list.prepend(card);
       }
 
       function toBase64(file) {
