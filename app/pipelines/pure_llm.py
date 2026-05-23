@@ -27,7 +27,7 @@ class PureLlmPipeline(Pipeline):
         prompt = build_pipeline_a_prompt(request)
         client = GeminiClient(api_key=settings.gemini_api_key, model=settings.llm_model)
         try:
-            completion = await client.generate_structured_answer(prompt)
+            completion = await client.generate_structured_answer(prompt, image_b64=request.image)
         except GeminiClientError as exc:
             fallback = build_stub_answer(
                 pipeline=self.pipeline_id,

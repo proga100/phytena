@@ -1,4 +1,5 @@
-from fastapi import APIRouter, Depends, Form, Request
+import base64
+from fastapi import APIRouter, Depends, File, Form, Request, UploadFile
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 
@@ -22,8 +23,14 @@ async def create_comparison(
     crop: str = Form(""),
     region: str = Form(""),
     language: str = Form("auto"),
+    image: UploadFile | None = File(None),
     runner: PipelineRunner = Depends(get_pipeline_runner),
 ) -> HTMLResponse:
+    image_b64 = None
+    if image and image.filename:
+        content = await image.read()
+        image_b64 = base64.b64encode(content).decode("utf-8")
+
     comparison = await runner.compare(
         CompareRequest(
             question=question,
@@ -32,6 +39,7 @@ async def create_comparison(
                 region=region or None,
                 language=language or "auto",
             ),
+            image=image_b64,
         )
     )
     return templates.TemplateResponse(request, "comparison.html", {"comparison": comparison})

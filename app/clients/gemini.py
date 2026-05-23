@@ -38,13 +38,26 @@ class GeminiClient:
         self.timeout_seconds = timeout_seconds
         self.http_client = http_client
 
-    async def generate_structured_answer(self, prompt: str) -> GeminiCompletion:
+    async def generate_structured_answer(
+        self, prompt: str, image_b64: str | None = None
+    ) -> GeminiCompletion:
         url = (
             "https://generativelanguage.googleapis.com/v1beta/models/"
             f"{self.model}:generateContent"
         )
+        parts = [{"text": prompt}]
+        if image_b64:
+            parts.append(
+                {
+                    "inline_data": {
+                        "mime_type": "image/jpeg",  # Assume JPEG for base64 from admin
+                        "data": image_b64,
+                    }
+                }
+            )
+
         payload = {
-            "contents": [{"role": "user", "parts": [{"text": prompt}]}],
+            "contents": [{"role": "user", "parts": parts}],
             "generationConfig": {
                 "temperature": 0.2,
                 "responseMimeType": "application/json",

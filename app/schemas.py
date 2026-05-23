@@ -48,6 +48,7 @@ class QueryRequest(BaseModel):
     question: str = Field(min_length=1)
     pipeline: PipelineId = PipelineId.HYBRID_RAG
     context: QueryContext = Field(default_factory=QueryContext)
+    image: str | None = None  # Base64 encoded image data
     return_trace: bool = True
 
 
@@ -69,6 +70,7 @@ class PipelineResponse(BaseModel):
 class CompareRequest(BaseModel):
     question: str = Field(min_length=1)
     context: QueryContext = Field(default_factory=QueryContext)
+    image: str | None = None  # Base64 encoded image data
     pipelines: list[PipelineId] = Field(
         default_factory=lambda: [
             PipelineId.PURE_LLM,
