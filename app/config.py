@@ -12,11 +12,12 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+asyncpg://agronomy:agronomy@localhost:5432/agronomy"
     sync_database_url: str = "postgresql+psycopg://agronomy:agronomy@localhost:5432/agronomy"
     embedding_dimension: int = Field(default=1024, ge=1)
-    llm_provider: str = "stub"
+    llm_provider: str = "google"
     llm_model: str = "gemini-2.5-flash"
     gemini_api_key: str | None = None
-    vision_provider: str = "stub"
-    embeddings_provider: str = "stub"
+    vision_provider: str = "google"
+    embeddings_provider: str = "google"
+    embeddings_model: str = "text-embedding-004"
     reranker_provider: str = "stub"
 
 
