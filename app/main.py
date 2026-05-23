@@ -6,6 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.config import Settings, get_settings
 from app.db import get_session
+from app.routes.query import router as query_router
 
 templates = Jinja2Templates(directory="app/admin/templates")
 
@@ -13,6 +14,7 @@ templates = Jinja2Templates(directory="app/admin/templates")
 def create_app() -> FastAPI:
     settings = get_settings()
     app = FastAPI(title=settings.app_name)
+    app.include_router(query_router)
 
     @app.get("/healthz")
     async def healthz() -> dict[str, str]:
