@@ -34,7 +34,13 @@ Implemented comparison pipelines:
 - Pipeline B: hybrid RAG with Postgres full-text search + pgvector.
 - Pipeline C: hybrid RAG + reranker.
 
-Current pipeline behavior is stubbed but structured. Each pipeline returns:
+Current behavior:
+
+- Pipeline A can call real Gemini when `LLM_PROVIDER=gemini` and `GEMINI_API_KEY` are configured.
+- Pipeline A falls back to a stub response when Gemini is not configured or returns an error.
+- Pipelines B and C are still stubbed until real KB retrieval/reranking are wired.
+
+Each pipeline returns:
 
 - diagnosis candidates;
 - confidence;
@@ -64,7 +70,7 @@ Current pipeline behavior is stubbed but structured. Each pipeline returns:
 
 ## What Is Not Implemented Yet
 
-- Real LLM provider integration.
+- Real LLM provider integration for providers other than Gemini.
 - Real Gemini/Claude Vision API integration.
 - Real embedding provider integration.
 - Real pgvector retrieval against stored KB chunks.
@@ -122,6 +128,8 @@ Important variables:
 | `SYNC_DATABASE_URL` | Sync database URL for Alembic |
 | `EMBEDDING_DIMENSION` | Vector dimension for pgvector schema |
 | `LLM_PROVIDER` | Stub for future LLM provider selection |
+| `LLM_MODEL` | LLM model name, for example `gemini-2.5-flash` |
+| `GEMINI_API_KEY` | Local Gemini key, never commit this |
 | `VISION_PROVIDER` | Stub for future vision provider selection |
 | `EMBEDDINGS_PROVIDER` | Stub for future embedding provider selection |
 | `RERANKER_PROVIDER` | Stub for future reranker provider selection |
@@ -144,6 +152,39 @@ curl http://127.0.0.1:8000/readyz
 ```
 
 ### Pipeline Query
+
+#### Enable Gemini For Pipeline A
+
+Create `.env` from `.env.example`:
+
+```bash
+cp .env.example .env
+```
+
+Edit `.env`:
+
+```env
+LLM_PROVIDER=gemini
+LLM_MODEL=gemini-2.5-flash
+GEMINI_API_KEY=your_local_key_here
+```
+
+Security rule: do not commit `.env`. It is already gitignored.
+
+Restart Docker after editing `.env`:
+
+```bash
+docker compose down
+docker compose up --build -d
+```
+
+Pipeline A will then use Gemini:
+
+```text
+question -> Gemini -> strict JSON -> Pydantic validation -> safety validation -> trace
+```
+
+If the key is missing or Gemini fails, Pipeline A returns the safe stub response and records the fallback in trace metadata.
 
 Run one pipeline:
 

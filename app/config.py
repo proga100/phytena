@@ -13,6 +13,8 @@ class Settings(BaseSettings):
     sync_database_url: str = "postgresql+psycopg://agronomy:agronomy@localhost:5432/agronomy"
     embedding_dimension: int = Field(default=1024, ge=1)
     llm_provider: str = "stub"
+    llm_model: str = "gemini-2.5-flash"
+    gemini_api_key: str | None = None
     vision_provider: str = "stub"
     embeddings_provider: str = "stub"
     reranker_provider: str = "stub"
