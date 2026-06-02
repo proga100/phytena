@@ -12,6 +12,7 @@ from sqlalchemy import func, literal_column, select
 from sqlalchemy.dialects.postgresql import insert as pg_insert
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
 from sqlalchemy.orm import sessionmaker
+from tqdm import tqdm
 
 # Add the project root to sys.path to import app modules
 sys.path.append(os.getcwd())
@@ -283,9 +284,11 @@ async def import_growz(
         total_diseases = len(disease_ids)
         print(f"Fetching treatments for {total_diseases} diseases (delay={delay}s, limit={limit})")
 
-        for index, disease_id in enumerate(disease_ids, start=1):
+        progress = tqdm(disease_ids, desc="Treatments", unit="disease")
+        for disease_id in progress:
             if resume and disease_id in skip_ids:
                 diseases_skipped += 1
+                progress.set_postfix(skipped=diseases_skipped, refresh=False)
                 continue
 
             records = await client.fetch_treatments_for_disease(str(disease_id))
@@ -294,7 +297,10 @@ async def import_growz(
                 async with session.begin():
                     await _import_treatment_records(session, records, tally)
             diseases_processed += 1
-            print(f"disease {index}/{total_diseases} id={disease_id} treatments={len(records)}")
+            # tqdm.write keeps the bar intact while still emitting a per-disease line.
+            progress.write(f"disease id={disease_id} treatments={len(records)}")
+            progress.set_postfix(done=diseases_processed, last=len(records), refresh=False)
+        progress.close()
     else:
         treatments = _load_json_records(treatments_path)
         print(f"Loaded {len(treatments)} treatment records from {treatments_path}")
