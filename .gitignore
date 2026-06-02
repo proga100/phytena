@@ -14,3 +14,7 @@ data/uploads/
 data/tmp/
 htmlcov/
 .coverage
+
+# Database dumps / backups
+*.sql
+pgdata/
