@@ -63,8 +63,8 @@ class GrowzTreatment(GrowzBase):
     __tablename__ = "growz_treatments"
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-    disease_id: Mapped[uuid.UUID] = mapped_column(
-        UUID(as_uuid=True), ForeignKey("growz_diseases.id", ondelete="CASCADE"), nullable=False
+    disease_id: Mapped[uuid.UUID | None] = mapped_column(
+        UUID(as_uuid=True), ForeignKey("growz_diseases.id", ondelete="CASCADE")
     )
     drug_id: Mapped[uuid.UUID] = mapped_column(
         UUID(as_uuid=True), ForeignKey("growz_drugs.id", ondelete="CASCADE"), nullable=False
@@ -77,5 +77,5 @@ class GrowzTreatment(GrowzBase):
     raw: Mapped[dict[str, Any]] = mapped_column(JSONB, server_default="{}", nullable=False)
     imported_at: Mapped[datetime] = created_at_column()
 
-    disease: Mapped[GrowzDisease] = relationship(back_populates="treatments")
+    disease: Mapped[GrowzDisease | None] = relationship(back_populates="treatments")
     drug: Mapped[GrowzDrug] = relationship(back_populates="treatments")
