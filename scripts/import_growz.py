@@ -220,15 +220,26 @@ async def import_growz(
                 if crop_id:
                     # The diseases/illness endpoints stuff a crop *description* into
                     # crop.name; the authoritative clean name comes from /ai/crops
-                    # (scripts/import_crops.py). So only fill the row when absent and
-                    # never overwrite an existing name/raw with the essay version.
+                    # (scripts/import_crops.py). So route the essay into `description`,
+                    # seed `name` only for brand-new crops (corrected later by
+                    # import_crops), and never overwrite an existing clean name.
+                    crop_essay = crop.get("name") or ""
+                    crop_excluded = pg_insert(GrowzCrop).excluded
                     inserted = await _upsert(
                         session,
                         GrowzCrop,
-                        {"id": crop_id, "name": crop.get("name") or "", "raw": crop},
                         {
-                            "name": func.coalesce(GrowzCrop.name, pg_insert(GrowzCrop).excluded.name),
-                            "raw": func.coalesce(GrowzCrop.raw, pg_insert(GrowzCrop).excluded.raw),
+                            "id": crop_id,
+                            "name": crop_essay,
+                            "description": crop_essay,
+                            "raw": crop,
+                        },
+                        {
+                            "name": func.coalesce(GrowzCrop.name, crop_excluded.name),
+                            "description": func.coalesce(
+                                crop_excluded.description, GrowzCrop.description
+                            ),
+                            "raw": func.coalesce(GrowzCrop.raw, crop_excluded.raw),
                         },
                     )
                     tally("crops", inserted)

@@ -18,6 +18,9 @@ class GrowzCrop(GrowzBase):
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name: Mapped[str] = mapped_column(Text, nullable=False)
+    # The diseases endpoint mislabels the crop *description* as crop.name; we keep the
+    # clean name in `name` (from /ai/crops) and the long essay here, for crop-info RAG.
+    description: Mapped[str | None] = mapped_column(Text)
     biology_name: Mapped[str | None] = mapped_column(Text)
     crop_category_id: Mapped[uuid.UUID | None] = mapped_column(UUID(as_uuid=True))
     crop_category_name: Mapped[str | None] = mapped_column(Text)
