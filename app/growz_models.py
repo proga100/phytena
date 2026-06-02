@@ -18,6 +18,9 @@ class GrowzCrop(GrowzBase):
 
     id: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
     name: Mapped[str] = mapped_column(Text, nullable=False)
+    biology_name: Mapped[str | None] = mapped_column(Text)
+    crop_category_id: Mapped[uuid.UUID | None] = mapped_column(UUID(as_uuid=True))
+    crop_category_name: Mapped[str | None] = mapped_column(Text)
     raw: Mapped[dict[str, Any]] = mapped_column(JSONB, server_default="{}", nullable=False)
     imported_at: Mapped[datetime] = created_at_column()
 

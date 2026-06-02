@@ -1,0 +1,1184 @@
+{
+    "data": [
+        {
+            "id": "50c75326-9218-463f-aa52-2401934c541b",
+            "name": "Sholi (kechpishar)",
+            "biology_name": "Oruza sativa L.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "f62d7c8a-ae12-4f0a-8e96-a58565dfe225",
+            "name": "Sholi (ertapishar)",
+            "biology_name": "Oruza sativa L.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "c617bfc8-7c00-479b-8fe5-0f099cb766a9",
+            "name": "Gulkaram",
+            "biology_name": "Brassica oleracea",
+            "crop_category": {
+                "id": "d325943c-1f24-459f-b5f9-09aa9d4c4248",
+                "name": "Bargli yoki poyali sabzavotlar"
+            }
+        },
+        {
+            "id": "50417cd1-e7ec-4eca-8e33-671d72fe3de7",
+            "name": "Xantal",
+            "biology_name": "Sinapis alba",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "654f1242-c942-4697-bc73-bcf0c55187ff",
+            "name": "Mandarin",
+            "biology_name": "Citrus reticulata",
+            "crop_category": {
+                "id": "95a73178-252b-4140-89bb-e459acbad5a8",
+                "name": "Sitrus ekinlar"
+            }
+        },
+        {
+            "id": "4545edb7-fa18-4eab-82bd-2720c805678f",
+            "name": "Tarvuz (o'rtapishar)",
+            "biology_name": "Citrullus lanatus",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "72ac4ba7-620a-408d-9df6-736b5e2e5ae2",
+            "name": "Bug'doy (lalmi)",
+            "biology_name": "triticum aestivum l.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "6009effd-f53a-44e7-87d9-bf71d6c8a09f",
+            "name": "Yong'oq",
+            "biology_name": "Júglans régia",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "bfee1609-10cb-493b-915b-d107892eda1e",
+            "name": "Gilos (o'rtapishar)",
+            "biology_name": "Prunus avium",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "5635ea07-1e52-480c-912d-677cbb912bf6",
+            "name": "Kungaboqar",
+            "biology_name": "Helianthus annuus",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "e89d86c6-bac6-4a57-b60d-3e46b101e225",
+            "name": "Pomelo",
+            "biology_name": "Citrus grandis ",
+            "crop_category": {
+                "id": "95a73178-252b-4140-89bb-e459acbad5a8",
+                "name": "Sitrus ekinlar"
+            }
+        },
+        {
+            "id": "4b270b72-fcb7-4e08-950a-f44cf622dbb8",
+            "name": "Javdar",
+            "biology_name": "Secale cereale",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "246d7d1b-e437-423c-ab4f-051d4a12ed1a",
+            "name": "Ananas",
+            "biology_name": "Ananas comosus ",
+            "crop_category": {
+                "id": "95a73178-252b-4140-89bb-e459acbad5a8",
+                "name": "Sitrus ekinlar"
+            }
+        },
+        {
+            "id": "40cdbbe2-7f72-4976-8229-c0cdaa8466e5",
+            "name": "Nok",
+            "biology_name": "Pyrus",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "39f3d591-d9a9-452b-be6c-414f240ffcbe",
+            "name": "Papaya",
+            "biology_name": "Carica papaya",
+            "crop_category": {
+                "id": "ffae8bbb-6318-478d-badd-3cd7ea28f03f",
+                "name": "Tropik va subtropik ekinlar"
+            }
+        },
+        {
+            "id": "480589a7-81ca-4e62-b4ba-4e67de5fb774",
+            "name": "Palma",
+            "biology_name": "Elaeis guineensis",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "fb65420d-adbe-428a-83be-ea3342ef4cbc",
+            "name": "Apelsin",
+            "biology_name": "Citrus sinensis",
+            "crop_category": {
+                "id": "95a73178-252b-4140-89bb-e459acbad5a8",
+                "name": "Sitrus ekinlar"
+            }
+        },
+        {
+            "id": "f6a3a461-d9b5-43f7-9e92-59cb794de967",
+            "name": "Yulaf",
+            "biology_name": "Avena",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "65709390-b062-43a0-af79-1b46c0fb57bc",
+            "name": "Mango",
+            "biology_name": "Mangifera indica",
+            "crop_category": {
+                "id": "ffae8bbb-6318-478d-badd-3cd7ea28f03f",
+                "name": "Tropik va subtropik ekinlar"
+            }
+        },
+        {
+            "id": "6782a5cb-a033-4609-b9dd-5ff4be804f1d",
+            "name": "Olxo'ri",
+            "biology_name": "Prunus domestica",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "4b75a4af-5986-4746-b3f6-c54f20aaefb8",
+            "name": "Limon",
+            "biology_name": "Citrus limon",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "0debfef9-34bf-4450-a387-79eaa1986100",
+            "name": "Kivi",
+            "biology_name": "Actinidia deliciosa",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "be2a8656-0aea-4f24-b1cb-bdd6e42e278e",
+            "name": "Findiq",
+            "biology_name": "Corylus avellana ",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "dc98b50b-edad-4201-ae77-6247c28147df",
+            "name": "Kassava",
+            "biology_name": "Manihot esculenta ",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "19eeab19-ee7d-4835-aadd-d3a068b90a1b",
+            "name": "Zaytun",
+            "biology_name": "Prunus",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "7f85c8c6-ab78-490b-bad3-b6948b7c2a39",
+            "name": "Lavlagi (takroriy)",
+            "biology_name": "Beta vulgaris",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "7b25bcbd-c9f6-4535-b0da-0a2726624a6f",
+            "name": "Chigirtka loviya",
+            "biology_name": "Ceratonia siliq",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "37ff39e6-2522-4918-a9a6-7cb8ef11f145",
+            "name": "Gilos (kechpishar)",
+            "biology_name": "Prunus avium",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "90015238-57d9-465e-a7aa-39ebed98be39",
+            "name": "Yeryong'oq",
+            "biology_name": "Arachis hypogaea",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "87529f25-9572-4443-89ec-a1c15127aef0",
+            "name": "Kaju yong'oq",
+            "biology_name": "Manihot esculenta ",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "c5389aaa-7575-4e1c-8fb3-f81d99b79a73",
+            "name": "Anjir",
+            "biology_name": "Ficus carica ",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "4bd103f6-085a-4e02-9f91-1eef1c73fbbc",
+            "name": "Sarimsoq piyoz (asosiy)",
+            "biology_name": "Allium sativum",
+            "crop_category": {
+                "id": "fa802e46-32e8-473c-b0e8-cde8f54d0591",
+                "name": "Piyozdosh sabzavot ekin"
+            }
+        },
+        {
+            "id": "b3660ce5-1160-42fd-93bd-a475c2451e4a",
+            "name": "Xurmo",
+            "biology_name": "Phoenix dactylifera ",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "9a6fdbed-bdd9-41ca-a4db-e8137489df32",
+            "name": "Kopra",
+            "biology_name": "Cocos nucifera",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "0420c3a7-3d0b-47ab-a1b1-ff194e3836d8",
+            "name": "Qahva",
+            "biology_name": "Coffea",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "9b208467-9886-421d-bfc5-45231c1fe2e4",
+            "name": "Kokos",
+            "biology_name": "Cocos nucifera",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "5d346cd6-3fc8-4a3f-9ec2-c854c9e312ad",
+            "name": "Kashtan",
+            "biology_name": "Castanea sativa",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "700c3a50-fe92-415c-94ee-b8d28a3e1723",
+            "name": "Mosh (asosiy)",
+            "biology_name": "Phaseolus aureus",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "d58f5c91-6070-42d5-b7ae-4000b454600b",
+            "name": "Gilos ( hosilga kirmagan)",
+            "biology_name": "Prunus",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "0a8eab37-ac12-4b92-a4e0-620463f7234b",
+            "name": "Kanop (urug'lik uchun)",
+            "biology_name": "Hibiscus cannabinus",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "ffdaf34e-b1e7-493c-99be-486f637b05e4",
+            "name": "Braziliya yong'og'i",
+            "biology_name": "Bertholletia excelsa",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "631ee4a6-4b76-405f-ac06-50e1d61a2b0a",
+            "name": "Karam (takroriy)",
+            "biology_name": "Brassica oleracea",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "3249d6a2-16cc-46e1-8e3c-73cfe924b3eb",
+            "name": "Loviya (takroriy)",
+            "biology_name": "Phaseolus vulgaris",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "e12ef626-91e6-427a-aedf-f8c9eb3aebb3",
+            "name": "Shaftoli",
+            "biology_name": "Prunus persica",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "61f55221-2174-4633-9acc-778d489a56bd",
+            "name": "Tritikale(kuzgi)",
+            "biology_name": "Triticosecale",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "5721f588-8424-41c8-8401-b75e2b2b4cb3",
+            "name": "Sarsabil",
+            "biology_name": "Asparagus offcinalis",
+            "crop_category": {
+                "id": "d325943c-1f24-459f-b5f9-09aa9d4c4248",
+                "name": "Bargli yoki poyali sabzavotlar"
+            }
+        },
+        {
+            "id": "61b3d332-b529-496f-8e82-5bb7d2bad7ab",
+            "name": "Avokado",
+            "biology_name": "Persea americana",
+            "crop_category": {
+                "id": "ffae8bbb-6318-478d-badd-3cd7ea28f03f",
+                "name": "Tropik va subtropik ekinlar"
+            }
+        },
+        {
+            "id": "acee25e0-1713-4d42-ad47-adf5982b7987",
+            "name": "Banan",
+            "biology_name": "Musa paradisiaca",
+            "crop_category": {
+                "id": "ffae8bbb-6318-478d-badd-3cd7ea28f03f",
+                "name": "Tropik va subtropik ekinlar"
+            }
+        },
+        {
+            "id": "1ebdf86e-5e42-496a-8052-19a276642437",
+            "name": "O'rik",
+            "biology_name": "Prunus armeniaca",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "b9e3ae07-25b3-469d-9b49-27bacae1befa",
+            "name": "Qovun (ertapishar)",
+            "biology_name": "Cucumis melo",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "a7ddfbb4-b9c1-414b-9f9f-cad67c213dfa",
+            "name": "Olcha",
+            "biology_name": "Cerasus",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "661c6b41-30b6-4ba3-a83b-3d4d1f50e4af",
+            "name": "Бодом (эртапишар)",
+            "biology_name": "Prunus dulcis",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "74697502-4b14-473a-95b7-f84586a811ab",
+            "name": "Uzum",
+            "biology_name": "Vitis vinifera",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "59cbb196-252b-4a43-9571-d38bbed3d9fa",
+            "name": "Sarimsoq piyoz (Takroriy)",
+            "biology_name": "Allium sativum",
+            "crop_category": {
+                "id": "fa802e46-32e8-473c-b0e8-cde8f54d0591",
+                "name": "Piyozdosh sabzavot ekin"
+            }
+        },
+        {
+            "id": "ed1d45cf-8d1d-485e-aaf9-7a3c587da8ad",
+            "name": "Anor",
+            "biology_name": "Punica granatum",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "099f40f3-fc05-4dd0-a4b1-3a2fcf672eef",
+            "name": "Kartoshka (kechki)",
+            "biology_name": "Solamum tuberosum",
+            "crop_category": {
+                "id": "573bf148-88d0-4d19-a51f-2154ecfe96a8",
+                "name": "Tuganak mevali ekinlar"
+            }
+        },
+        {
+            "id": "fbacad1a-f587-471f-a4e9-0cc48705addd",
+            "name": "Turp",
+            "biology_name": "Raphanus sativus L.",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "f8d1ee5d-014b-4bfa-aa6d-4e7a5d5fb168",
+            "name": "Sabzi (takroriy)",
+            "biology_name": "Daucus carota",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "4e25f06b-0737-4d31-8b27-61b5aa1f421f",
+            "name": "Soya (asosiy)",
+            "biology_name": "Glycine max (L.) Merr",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "c8fcba7c-9561-41b2-9380-42fa80be362b",
+            "name": "Sabzi (to'qsonbosti)",
+            "biology_name": "Daucus carota",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "cc3c8189-62e9-4e1f-a92b-dbc615ca4fa6",
+            "name": "Soya (takroriy)",
+            "biology_name": "Glycine max (L.) Merr",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "c466bead-b3e5-4382-9278-b175469aa530",
+            "name": "Makkajo'xori (silos)",
+            "biology_name": "Zea mays",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "31784402-b1cc-49b4-8e10-d2c187c6c454",
+            "name": "Kashnich",
+            "biology_name": "Coriandrum",
+            "crop_category": {
+                "id": "1064917f-8e36-4dcd-bf83-0c4a3aa9be76",
+                "name": "Кoʻkatlar"
+            }
+        },
+        {
+            "id": "8ac2b979-cec6-421d-a118-de8c63ef62fc",
+            "name": "Mosh (takroriy)",
+            "biology_name": "Phaseolus aureus",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "1ab9a4df-ff90-4734-a40d-030b83c0e113",
+            "name": "Arpa (sug'oriladigan)",
+            "biology_name": "Horduem vulgare",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "8611f0c4-e5db-4147-ad35-02a645d586f7",
+            "name": "Rukola (bahorgi)",
+            "biology_name": "Erúca satíva",
+            "crop_category": {
+                "id": "d325943c-1f24-459f-b5f9-09aa9d4c4248",
+                "name": "Bargli yoki poyali sabzavotlar"
+            }
+        },
+        {
+            "id": "fde70d41-4802-4885-b070-455ede55cc81",
+            "name": "Shirin qalampir",
+            "biology_name": "Capsicum annuum L",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "0e980531-aa73-4c8a-86f1-d3f330d0d382",
+            "name": "Yasmiq",
+            "biology_name": "Lens culinaris.",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "cab3f904-be43-4a0a-8f36-63501b3d81dd",
+            "name": "Rukola (kuzgi)",
+            "biology_name": "Erúca satíva",
+            "crop_category": {
+                "id": "d325943c-1f24-459f-b5f9-09aa9d4c4248",
+                "name": "Bargli yoki poyali sabzavotlar"
+            }
+        },
+        {
+            "id": "cb8c6b52-c003-400f-acc2-d9d9c0b41649",
+            "name": "Moyli zig’ir",
+            "biology_name": "Linum usitatissiut L",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "7598b8f2-088d-4e6d-9b78-5caa9c6ef848",
+            "name": "Rediska (Takroriy)",
+            "biology_name": "Raphanus sativus L.",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "911b8e54-bdd6-4bd1-93bd-197930802776",
+            "name": "Maxsar",
+            "biology_name": "Carthamnus tinctorius",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "f360191c-871b-4a27-8755-67461f5797ae",
+            "name": "Petrushka",
+            "biology_name": "Petroselinum Crispum",
+            "crop_category": {
+                "id": "1064917f-8e36-4dcd-bf83-0c4a3aa9be76",
+                "name": "Кoʻkatlar"
+            }
+        },
+        {
+            "id": "3e5f099c-6721-4610-a696-3e471d6675b7",
+            "name": "Artishok",
+            "biology_name": "Supaga",
+            "crop_category": {
+                "id": "d325943c-1f24-459f-b5f9-09aa9d4c4248",
+                "name": "Bargli yoki poyali sabzavotlar"
+            }
+        },
+        {
+            "id": "c1be1876-8038-445d-8b0c-80e04c613c5a",
+            "name": "Qand lavlagi",
+            "biology_name": "Beta vulgaris L",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "cb3736ea-926b-4471-bd11-fbbb4a2121d8",
+            "name": "Qulupnay (Kuzgi)",
+            "biology_name": "Fragaria × ananassa",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "8f906cbe-5f81-46b6-b93b-ab428a62a6ac",
+            "name": "Porey piyoz",
+            "biology_name": "Allinium porrum",
+            "crop_category": {
+                "id": "fa802e46-32e8-473c-b0e8-cde8f54d0591",
+                "name": "Piyozdosh sabzavot ekin"
+            }
+        },
+        {
+            "id": "077cae1b-9721-4ae4-9aaa-7b1e2f693762",
+            "name": "Bryussel karami",
+            "biology_name": "Brassica oleracea var. Gemmifera",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "ce890974-b035-4257-9871-9175002ec176",
+            "name": "Lavlagi (asosiy)",
+            "biology_name": "Beta vulgaris",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "ff9cba38-5074-4beb-991d-b63d69bd7787",
+            "name": "Olma (kechpishar)",
+            "biology_name": "Malus",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "4348007f-3e5b-4036-8ee4-5636654aea1c",
+            "name": "Tarvuz (kechpishar)",
+            "biology_name": "Citrullus lanatus",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "5ee0b3dc-b644-451b-a92a-26e9e83ff244",
+            "name": "Qovun (kechpishar)",
+            "biology_name": "Cucumis melo",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "7b91e183-7070-4212-8ca0-45fdde20f624",
+            "name": "Qovun (o'rta pishar)",
+            "biology_name": "Cucumis melo",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "c393944d-c015-48f8-9207-b67c960dae44",
+            "name": "Uzum (hosilga kirmagan)",
+            "biology_name": "Vitis vinifera",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "665318bb-74d6-486e-af35-e479eaf1feb1",
+            "name": "Raps (kuzgi)",
+            "biology_name": "Brássica nápus",
+            "crop_category": {
+                "id": "d4f3229d-d965-4c6a-ab81-1b6a8b0e4efd",
+                "name": "Moyli ekinlar"
+            }
+        },
+        {
+            "id": "ecd43914-ebe9-41d1-8f95-8c70e4ccb96e",
+            "name": "Makkajo'xori (takroriy)",
+            "biology_name": "Zea mays L.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "0d5b4c31-c6be-4154-b769-12c53d188c68",
+            "name": "Bug'doy (bahorgi, sug'oriladigan)",
+            "biology_name": "Triticum aestivum l.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "ab31657d-daed-4194-a15c-1f06d2e44d5e",
+            "name": "Brokkoli",
+            "biology_name": "Brassica oleracea var. italica",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "3bf65689-299d-4df8-9377-7171c709106d",
+            "name": "No'xat (lalmi)",
+            "biology_name": "Cicer arietinum L",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "1a5cc4a3-633c-4e55-9f83-71312bb524f3",
+            "name": "Piyoz (To'qsonbosti)",
+            "biology_name": "Allium cepa",
+            "crop_category": {
+                "id": "fa802e46-32e8-473c-b0e8-cde8f54d0591",
+                "name": "Piyozdosh sabzavot ekin"
+            }
+        },
+        {
+            "id": "6c2c11be-9b7d-4a13-ac6f-a1411b31da24",
+            "name": "Barg sholg’om",
+            "biology_name": "Brassica rapa",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "64211ee3-afb0-42fc-a40c-0e497098693b",
+            "name": "No'xаt (sug'oriladigan)",
+            "biology_name": "Cicer arietinum L",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "41957256-04cf-49d3-8d3e-18d2c9e102c0",
+            "name": "Tariq",
+            "biology_name": "Panicum miliaceum L",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "368dd4d3-9d7a-4741-bc4b-9890f0c69198",
+            "name": "Suli (bahorgi)",
+            "biology_name": "Avéna",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "b0b93d19-8463-4849-9591-e0a8a888699a",
+            "name": "Shvit",
+            "biology_name": "Anethum",
+            "crop_category": {
+                "id": "1064917f-8e36-4dcd-bf83-0c4a3aa9be76",
+                "name": "Кoʻkatlar"
+            }
+        },
+        {
+            "id": "a8e2ee6d-7dc6-4f96-ab49-60ac1315d5c6",
+            "name": "Rediska (Asosiy)",
+            "biology_name": "Raphanus sativus",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "81f98d39-8463-41e1-af05-af9735b41f21",
+            "name": "Tarvuz (ertapishar)",
+            "biology_name": "Citrullus lanatus",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "2ac3d2df-973a-4369-b214-e5dc39c23d7b",
+            "name": "Pista",
+            "biology_name": "Pistacia",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "be0ac4d5-43c0-4508-9f8c-da731e5d2fdc",
+            "name": "Osh lavlagi (to'qsonbosti)",
+            "biology_name": "Beta vulgaris",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "9e7d1645-e062-4158-a7d0-9372b38b4c2b",
+            "name": "Pomidor",
+            "biology_name": "Solanum lycopersicum",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "93da8c02-ddb3-42cb-b173-14f9144fddd9",
+            "name": "Qovoq",
+            "biology_name": "Cucurbita",
+            "crop_category": {
+                "id": "fd8479af-0dc5-4179-80b9-97fe091cd015",
+                "name": "Poliz ekinlari"
+            }
+        },
+        {
+            "id": "c4731289-d101-483b-b377-30392785aa16",
+            "name": "Makkajo'xori (don uchun)",
+            "biology_name": "Zea mays",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "9b7e92af-3779-4770-a903-8db099ad7867",
+            "name": "Behi",
+            "biology_name": "Cydonia oblonga",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "dcd42d68-551c-4080-9ac7-ba7b89504217",
+            "name": "Gilos",
+            "biology_name": "Prunus avium",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "4d77fc0f-441f-4e63-99ba-af9dcd636843",
+            "name": "Bamiya",
+            "biology_name": "Hibiscus esculentus L",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "6c9ddcf6-3091-473f-bff3-31d4f51c2733",
+            "name": "Piyoz (asosiy)",
+            "biology_name": "Allium cepa",
+            "crop_category": {
+                "id": "fa802e46-32e8-473c-b0e8-cde8f54d0591",
+                "name": "Piyozdosh sabzavot ekin"
+            }
+        },
+        {
+            "id": "babf14f7-43ab-4eef-a483-2cbedf298d6a",
+            "name": "Olma (o'rtapishar)",
+            "biology_name": "Malus",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "d422f36d-a19d-46d0-a580-9ee1ec0e72d2",
+            "name": "Olma (erta pishar)",
+            "biology_name": "Malus sylvestris",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "32b751f4-5c0e-4e02-b542-9c601d94f4d1",
+            "name": "Bodom",
+            "biology_name": "Prunus dulcis",
+            "crop_category": {
+                "id": "dc72889b-146f-4786-bfef-3ae417bc21d2",
+                "name": "Bog'"
+            }
+        },
+        {
+            "id": "281e20ec-00d3-48cd-99e9-6a200563e2a5",
+            "name": "Qulupnay (asosiy)",
+            "biology_name": "Fragaria",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "ef8bdd47-8db3-4210-869e-398dd2d7beee",
+            "name": "Sholg'om (asosiy)",
+            "biology_name": "Brassica rapa",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "75412c1b-14e9-4c1c-b7de-eb74e4bf39b9",
+            "name": "Achchiq qalampir",
+            "biology_name": "Sapsicum annuum",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "8cdf342c-c938-4c82-b57f-b0d93415fc90",
+            "name": "Lavlagi (xashaki)",
+            "biology_name": "Beta vulgaris",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "62f1279b-de39-43a0-98ec-d7714b0cba67",
+            "name": "Sabzi (asosiy)",
+            "biology_name": "Daucus carota",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "bc44b2e4-80ce-40a0-bcd5-de631f178ff9",
+            "name": "Arpa (baxorgi, lalmi)",
+            "biology_name": "Hordeum L. ",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "694a964e-dd14-4ec9-8549-04311af59e85",
+            "name": "Baqlajon",
+            "biology_name": "Solanum melongena",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "03d4edae-566a-4e51-82ac-1705d8f2580d",
+            "name": "Batat",
+            "biology_name": "Romoea batatas L.",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "23f2feac-37c4-4224-a400-dd26c6016aa0",
+            "name": "Malina",
+            "biology_name": "Rubus",
+            "crop_category": {
+                "id": "6997e7a8-4752-4457-aa21-f5a5e98709df",
+                "name": "Rezavorlar 1 yillik"
+            }
+        },
+        {
+            "id": "e443f00d-d5ab-4f37-bbe6-9b54c013202b",
+            "name": "Sholi (o'rtapishar)",
+            "biology_name": "Oryza sativa L.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "b6f10b25-41ee-4626-846b-967a4440e1a9",
+            "name": "Bodring (asosiy)",
+            "biology_name": "Cucumis sativus L.",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "675af361-d1b2-4900-833d-39563b259f5f",
+            "name": "Beda",
+            "biology_name": "Medicago L.",
+            "crop_category": {
+                "id": "16266fc4-a56b-4285-80d9-1a96db73c411",
+                "name": "Yem-xashak ekinlari"
+            }
+        },
+        {
+            "id": "52a6b4f0-689e-4d7b-9423-ea6b71239316",
+            "name": "Ismaloq",
+            "biology_name": "Spinacia",
+            "crop_category": {
+                "id": "1064917f-8e36-4dcd-bf83-0c4a3aa9be76",
+                "name": "Кoʻkatlar"
+            }
+        },
+        {
+            "id": "b1ec4315-f246-4784-a294-9d53cdfbab2b",
+            "name": "Sudan o'ti",
+            "biology_name": "Sorghum sudanense",
+            "crop_category": {
+                "id": "16266fc4-a56b-4285-80d9-1a96db73c411",
+                "name": "Yem-xashak ekinlari"
+            }
+        },
+        {
+            "id": "fa82569e-4e05-4ab1-b9dc-647613f7eb7e",
+            "name": "Bug'doy (kuzgi)",
+            "biology_name": "Triticum aestivum",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "c0de42dd-3981-42ad-9d14-98c3ce9e98eb",
+            "name": "Burchoq",
+            "biology_name": "Yathyvus sativis L.",
+            "crop_category": {
+                "id": "513112b4-a908-484d-8188-b4b56b8c9bea",
+                "name": "Don dukkakli ekinlar"
+            }
+        },
+        {
+            "id": "3c0f88c0-6aaf-4ffc-ac13-57e1e58ce517",
+            "name": "Sholg'om (takroriy)",
+            "biology_name": "Brassica rapa",
+            "crop_category": {
+                "id": "142d88e3-f6f9-4278-a0ed-48882aacb9c1",
+                "name": "Ildiz mevali ekinlar"
+            }
+        },
+        {
+            "id": "fb6bacb1-e0a8-4020-9146-e5cd484f3cdc",
+            "name": "G'o'za",
+            "biology_name": "Gossypium",
+            "crop_category": {
+                "id": "e05fb467-9bae-4454-9777-f8ec897d1370",
+                "name": "Tolali ekinlar"
+            }
+        },
+        {
+            "id": "81bbb6ec-9d8e-4f8c-b6cd-e570f1433eb1",
+            "name": "Kartoshka (asosiy)",
+            "biology_name": "Solamum tuberosum",
+            "crop_category": {
+                "id": "573bf148-88d0-4d19-a51f-2154ecfe96a8",
+                "name": "Tuganak mevali ekinlar"
+            }
+        },
+        {
+            "id": "e720fa84-8681-403c-aeca-4f17a85325fa",
+            "name": "Karam (asosiy)",
+            "biology_name": "Brassica oleracea",
+            "crop_category": {
+                "id": "b3f76042-2bd0-4654-96d0-2977aebe840b",
+                "name": "Sabzavotlar"
+            }
+        },
+        {
+            "id": "266cf3e7-2078-40b9-bed2-6bc5333d6631",
+            "name": "Jo'xori (don uchun)",
+            "biology_name": "Sorghum vulgare Pers.",
+            "crop_category": {
+                "id": "532655b9-34fe-4ead-ba99-76dd598f50e7",
+                "name": "Donli ekinlar"
+            }
+        },
+        {
+            "id": "45ff41ca-4516-482f-bc8a-1cc6e38063c1",
+            "name": "Kanop",
+            "biology_name": "Hibiscus cannabinus",
+            "crop_category": {
+                "id": "e05fb467-9bae-4454-9777-f8ec897d1370",
+                "name": "Tolali ekinlar"
+            }
+        }
+    ],
+    "total": 131
+}
