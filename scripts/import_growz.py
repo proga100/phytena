@@ -184,7 +184,7 @@ async def import_growz(
     from_api: bool,
     *,
     delay: float = 0.3,
-    limit: int = 100,
+    limit: int = 50,
     max_diseases: int | None = None,
     resume: bool = False,
 ) -> None:
@@ -323,7 +323,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--delay", type=float, default=0.3, help="Seconds to sleep between API requests."
     )
-    parser.add_argument("--limit", type=int, default=100, help="API page size.")
+    parser.add_argument("--limit", type=int, default=50, help="API page size.")
     parser.add_argument(
         "--max-diseases",
         type=int,

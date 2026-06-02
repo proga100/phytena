@@ -28,7 +28,7 @@ class GrowzApiClient:
         *,
         base_url: str,
         token: str | None,
-        page_size: int = 100,
+        page_size: int = 50,
         timeout_seconds: float = 45.0,
         delay_seconds: float = 0.3,
         max_retries: int = 3,
