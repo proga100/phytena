@@ -1,0 +1,1055 @@
+{
+    "data": [
+        {
+            "id": "748083ab-44ba-4e38-af90-a349a9046132",
+            "dose_min": "1",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-20T11:23:19.479Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "affc6586-1d97-4d0f-bee4-6e39f35992c5",
+                "name": "EURO-KAPTAN (Каптан 500 г/кг)",
+                "description": "Un shudring, mildyu va antraknozga qarshi yuqori samarali fungitsid. Foydali hasharotlarga va changlatuvchilarga zararli ta'sir ko'rsatmaydi, mevalarni saqlash sifatini oshirishga yordam beradi. Yomg'irda yuvilib ketmaydi. ",
+                "createdAt": "2025-02-20T11:23:19.408Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "06275c32-987a-4f30-9cd4-a5e640ec2024",
+            "dose_min": "0.8",
+            "dose_max": "1",
+            "type": "disease",
+            "createdAt": "2025-04-08T11:09:40.381Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "9067a5f1-150d-45f0-aba8-199c687401c4",
+                "name": "Ukvadrio 25% sus.k. (Azoxystrobin 250 l/g)",
+                "description": "O'simliklar kasalliklarining keng spektoridan ximoya qiladi. O'simliklardan olingan mahsulotning sifati va barqarorligini yaxshilaydi. Tizimli va sirt ta'sirga ega.",
+                "createdAt": "2025-04-08T11:09:40.356Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "535f5499-0bfa-4e37-9c22-085fc62f500c",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T19:22:42.049Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "6b99f094-dd51-4bf1-95ea-62991541edb5",
+                "name": "PREVIKUR LIDER 84% SL (Propamokarb gidroxlorid 530 l/g + Fosetil 310 l/g) ",
+                "description": "Kasalliklarga qarshi samarali fungisid. ",
+                "createdAt": "2025-02-26T19:22:42.042Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "7973c278-9fac-41ed-a37a-dbfebcb0ec52",
+            "dose_min": "0.3",
+            "dose_max": "0.3",
+            "type": "disease",
+            "createdAt": "2025-09-03T07:02:21.564Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "3a0af856-f954-41b3-ad7c-bae90098f310",
+                "name": "Vi ALTO SUPER 33%(..Пропиконазол 25% + Ципроконазол 8%)",
+                "description": "Кузги буғдойда сариқ ва қўнғир зангга қарши қўлланилади. Препарат ишловлари ҳосил етилишидан 30 кун олдин (олмада 20 кун) тўхтатиш керак.Тавсия: Ушбу препаратга сирт фаол моддани (клей) қўшиб бериш тавсия қилинади. Жумладан \nEKO SLIWETT 10 литр сувга 5-7 мл, гектарига 0,15-0,2 л қўшиб қўлланилади",
+                "createdAt": "2025-02-26T17:34:08.070Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "2dc3ed5d-d959-45ae-a952-447b5fe391bd",
+            "dose_min": "0.4",
+            "dose_max": "0.6",
+            "type": "disease",
+            "createdAt": "2025-02-20T12:04:20.900Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "6c1c3088-a2c7-4b58-a4b1-a7c1ec86fd76",
+                "name": "ADDRESS (Азоксистробин 25%)",
+                "description": "Ушбу препарат токдаги мильдю, оидиум, помидордаги фитофтороз, альтернариоз, уншудринг, бодрингдаги пероноспороз, уншудринг ва бошқа замбуруғли касалликларга қарши курашишда қўлланилади.",
+                "createdAt": "2025-02-20T12:04:20.867Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1dc2e41d-9551-46d9-889d-b9c2bfc1fd48",
+            "dose_min": "1.5",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:17:45.119Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "59243c00-d4b5-49df-812e-787106326ee8",
+                "name": "АНТРАКОЛ 70% с.э.г. (Propineb)",
+                "description": "Qishloq, xo'jalik ekinlarida fitapatogen zamburug'lar qo'zg'atadigan juda ko'p kasalliklariga qarshi ishlatiladigan kontakt ta'sirli fungisid",
+                "createdAt": "2025-02-26T18:17:45.072Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "2fff448f-0fe7-4d5e-a74c-f54cc1f513de",
+            "dose_min": "2",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:32:35.987Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "390f5cda-893d-468c-987c-85cc1d9e9c7e",
+                "name": "PROKSANIL (Промокарб гидрохлорид, 400 г/л + цимонаксил, 50 г/л)",
+                "description": "Сабзавот экинларини кўплаб касалликлардан ҳимоя қилишган мўлжалланган, таркибида микроэлементлар мавжуд бўлган текканда таъсир этувчи фунгицид",
+                "createdAt": "2025-02-21T12:32:35.952Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1ff36105-01b1-4659-a057-47042eaa16a2",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:34:19.193Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "e1e9bdf1-0f57-4564-91f4-a2028038bd4c",
+                "name": "MED XLOROK 85% (Mis xlorli 85%)",
+                "description": "Препарат антракноз, милдю, фитофтороз, алтернариоз, переноспориоз ва калмаразга қарши қўлланилади.",
+                "createdAt": "2025-02-26T17:34:19.158Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4a59836b-c5c0-4ce8-838a-21e59fceb184",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:43:19.173Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "ba544ff8-1386-4a52-a005-4a7838f29f7d",
+                "name": "Marzem 80% с.э.г.",
+                "description": "Картошка, помидор, бодринг ва узумнинг комплекс касалликларига қарши, текканда ва ичдан таъсир этувчи икки таркибли фунгицид.",
+                "createdAt": "2025-02-21T12:43:19.135Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "711546d6-3578-44da-a889-2761e0cdebf0",
+            "dose_min": "1",
+            "dose_max": "1.2",
+            "type": "disease",
+            "createdAt": "2025-02-21T10:50:40.274Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "8eaac1ee-3f28-46b9-89f9-aa31b1523e57",
+                "name": " Нуво 72.2% с.э.к.",
+                "description": "Ҳимоялаш таъсирига эга тизимли фунгицид",
+                "createdAt": "2025-02-21T10:50:40.253Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "20fc5c52-703c-421a-aaf5-e87d8c376227",
+            "dose_min": "1",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:43:33.244Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "c63e4928-0e16-4b0f-b64f-fd72b3f4272c",
+                "name": "Tancap xtra 80% c.э.г.",
+                "description": "Ун шудринг, мильдю ва антракнозга қарши юқори самарали фунгицид.",
+                "createdAt": "2025-02-21T12:43:33.181Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1b3e8310-b3a3-47d3-88b0-411e75245156",
+            "dose_min": "2.5",
+            "dose_max": "2.5",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:26:13.857Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "b068cf19-1695-4af4-929a-c1718c2b6e39",
+                "name": "РИДОСТАР 72% Н.К",
+                "description": "Намланувчи кукун",
+                "createdAt": "2025-02-26T18:26:13.850Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "2a75398a-3207-4a31-9bf7-50ccf0c5b48b",
+            "dose_min": "1",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-20T11:23:19.443Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "3af448b8-6c91-4139-9d29-e223391da246",
+                "name": "EURO-KAPTAN (Каптан 500 г/кг)",
+                "description": "Ун шудринг, мильдю ва антракнозга қарши юқори самарали фунгицид.",
+                "createdAt": "2025-02-20T11:23:19.363Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4f3d9a13-fb59-4b88-885e-964da0a4e52b",
+            "dose_min": "1.2",
+            "dose_max": "1.2",
+            "type": "disease",
+            "createdAt": "2024-09-04T07:52:36.150Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "cfdac781-9fe2-4480-a059-2ae08c569647",
+                "name": "Vi ZIRAM 80%",
+                "description": "Олмадаги калмаразга, қўнғир доғланиш, Шафтолида барг бужмалоқланиши, клястероспориозга қарши қўлланилади. Қўллаш вақти-Ўсимликларнинг гуллаш вақтидан аввал ва гул тўкилгандан кейин.",
+                "createdAt": "2024-09-04T07:52:35.965Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "74992a10-98ad-4e4d-86ef-a0e437b66813",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:42:45.611Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "1682f3cc-b238-4e2c-9876-6a791adf500e",
+                "name": "ВЕРДАН 80 % С.Э.Г. ",
+                "description": "Ҳимоя таъсирга эга системали фунгицид. Ўсимликларни иммун системасини инфекциялардан химояланиш кобилиятини кучайтиради. Мойли чириш, пероноспороз ва бошқа хавфли касалликлардан даволайди ва уларни кайта пайдо бўлишини олдини олади. Бактериал куйиш ривожланишини тўхтатади ва олдини олади.",
+                "createdAt": "2025-02-26T17:42:45.562Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "34a6feb7-d995-4be9-8713-52398d91dfce",
+            "dose_min": "1.5",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-20T12:13:51.121Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "da91c656-b160-448f-8200-eb54dcc508dd",
+                "name": "ENTREVICUR (Пропамокарб гидрохлорид 72,2%)",
+                "description": "Ушбу препарат помидордаги фитофтороз ва альтернариоз ҳамда илдиз чириш касалликларига қарши қўлланганда юқори самара беради.",
+                "createdAt": "2025-02-20T12:13:51.113Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "752ec668-aee2-440b-b076-cb2efa6a213a",
+            "dose_min": "2",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:32:50.617Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "c6cd2272-4151-47ba-91fa-75561eb9e5c7",
+                "name": "BALEAR (Хлороталонил, 720 г/л)",
+                "description": "Сабзавот экинлари ва картошкани ҳимоя қилишда кенг кўламда қўлланиладиган текканда таъсир этувчи фунгицид",
+                "createdAt": "2025-02-21T12:32:50.597Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "31912189-fc8b-40fa-8346-f8382439658f",
+            "dose_min": "2.5",
+            "dose_max": "3",
+            "type": "disease",
+            "createdAt": "2025-02-20T12:03:31.978Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "637af347-c937-4f8a-a591-f2d504f368e0",
+                "name": "AKSESS (Хлороталонил 50%)",
+                "description": "Препарат ўсимлик вегетатив органларининг бир қатоp фитопатогенларидан, жумладан, сохта уншудринг замбуруғидан узоқ муддатли ҳимоя қилади.",
+                "createdAt": "2025-02-20T12:03:31.956Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "68276521-9134-4393-bc21-dd339785f84a",
+            "dose_min": "1.5",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:39:24.726Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "1e81946f-d10d-4f0a-b0a2-26072988febf",
+                "name": "АГРИСЕЙВ 72.2 % Э.К",
+                "description": "Системали фунгицид, касалликларни бошланғич босқичида юқори натижа беради. Касалликнинг холатига қараб 10-15 кун оралиғида такрорий ишлов берилади. Илдиз ва барг орқали қулланилганда фитофтороз ва сохта пероноспорозга юқори самарали.",
+                "createdAt": "2025-02-26T17:39:24.718Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4381ce04-d34f-4ab2-b304-9a007ffb71cf",
+            "dose_min": "1",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-03-14T06:38:03.845Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "62670cd6-136a-434c-84d4-7297c0bdcce5",
+                "name": "Vi KAPTAN 50%",
+                "description": "Олмада калмаразга қарши қўлланилади.",
+                "createdAt": "2025-03-14T06:38:03.766Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "24b2c026-40b4-415e-902c-491a5c16fac9",
+            "dose_min": "0.4",
+            "dose_max": "0.6",
+            "type": "disease",
+            "createdAt": "2025-02-24T18:52:23.394Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "6251f0a2-8241-4cac-8182-6a825b6f2e9d",
+                "name": "KVADRIO TILT GOLD 25% (Azoksistrobin 250 gr/l, 25%)",
+                "description": "Kvadrio tilt узоқ муддатли таъсир кучига эга бўлиб, касалликларни олдини олади ва даволайди. Экинларнинг мевалар бериш давомийлигини оширади ва йиғиб олинган ҳосилни сақлаш муддатини узайтиради .",
+                "createdAt": "2025-02-24T18:52:23.323Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "61a85382-2614-4d20-b771-5b8416cd19c3",
+            "dose_min": "0.4",
+            "dose_max": "0.4",
+            "type": "disease",
+            "createdAt": "2025-07-31T06:18:21.621Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "b4c151c2-7856-4f0a-8611-5813b3253178",
+                "name": "BEYLETON GOLD (Triademefon 250 g/kg, 25%)",
+                "description": "Занг, уншудринг, септориоз, калмараз каби замбуруғли касалликларга қарши самарали фунгицид.",
+                "createdAt": "2025-02-24T18:53:16.497Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4b0073a0-d223-4431-8050-cf818f05f1d0",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:34:13.001Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "79380ae2-7ee8-4afb-a35e-3656ae5f8da0",
+                "name": "RIDAMILL GOLD 72% .Манкоцеб 64% + Металаксил 8%",
+                "description": "Пиёзда переноспорозга қарши ва Токда оидиумга қарши қўлланилади.  Тавсия: RIDAMILL GOLD 72% препаратини EKO COMBIMIX (микроэлементларжамланмаси) билан (10 литр сувга 20 гр) қўшиб қўллаш тавсия қилинади. Ушбу прeпаратга сирт фаол моддани (клей) қўшиб бериш тавсия қилинади. Жумладан EKO SLIWETT 10 литр сувга 5-7 мл, гектарига 0,15-0,2 л қўшиб қўлланилади.",
+                "createdAt": "2025-02-26T17:34:12.968Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1f4e3cf5-c017-4d7b-9c27-f55f1a6525e6",
+            "dose_min": "2.5",
+            "dose_max": "2.5",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:26:17.627Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "a3302cce-61db-4d71-93e5-1d407acc3f17",
+                "name": "РИДОСТАР 72% Н.К",
+                "description": "Намланувчи кукун",
+                "createdAt": "2025-02-26T18:26:17.620Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1d728e24-6052-401c-9e74-529874896bb1",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-03-06T07:08:48.255Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "03866548-d590-4c89-bd5a-0cc258c28d7e",
+                "name": "ЦИМОПРО 76 % Н.К. ",
+                "description": "Контакт ва қисман системали фунгицид. Милдью, мева чириши, антракноз ва доғланишларга қарши юкори самарали, ўсимликларга зарар етказмайди, шароббоп йўналишидаги узумларда қўлланилганда махсулот (вино) таьмини ўзгартирмайди",
+                "createdAt": "2025-03-06T07:08:48.245Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "0343f73b-3821-4f80-a9d9-2c3ae38804f2",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:34:15.677Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "d148eac1-0388-4ad4-9df9-ee4eef37406d",
+                "name": "RIDAMILL GOLD 72%",
+                "description": "Пиёзда переноспорозга қарши ва Токда оидиумга қарши қўлланилади.",
+                "createdAt": "2025-02-26T17:34:15.644Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "07f6fd13-e3e3-4917-9793-8d4450c41e9f",
+            "dose_min": "0.2",
+            "dose_max": "0.3",
+            "type": "disease",
+            "createdAt": "2025-08-18T06:00:26.125Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "71d95de3-847c-488c-abaa-900d2613923a",
+                "name": "Ustrobi (Krezoksin-metil 50%(500k/gr)",
+                "description": "Preparad ekinlarda un-shudring, kalmaraz, alternarioz, perenosporioz va boshqa kasalliklarga qarshi samarali qo'llaniladi. ",
+                "createdAt": "2025-03-14T06:38:03.528Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "46eb2d01-9525-4ec2-ae29-73a63e8fe529",
+            "dose_min": "1.2",
+            "dose_max": "1.6",
+            "type": "disease",
+            "createdAt": "2025-02-26T19:23:27.939Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "e65db3f7-7ddd-4796-a241-d48e1ecaf866",
+                "name": "CANCOZEB 80 WP (Man koseb 80%)",
+                "description": "Касалликларга қарши\tсамарали фунгицид.\n",
+                "createdAt": "2025-02-26T19:23:27.922Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "74097a31-78f3-4ed4-bf3b-82e0f369c69e",
+            "dose_min": "1.5",
+            "dose_max": "2.5",
+            "type": "disease",
+            "createdAt": "2025-12-26T08:43:21.220Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "c4197d26-1433-47df-8c83-b925d00091dc",
+                "name": "REDOMIL PLYUS 72.2% NK",
+                "description": "Kontakt va tizimli ta'sirga ega. Zamburug‘ kasalliklarini barcha bosqichlarida yuqori samarali; O‘simlikning ildizlaridan barglarigacha ximoya qiladi; profilaktika maqsadida yoki kasallikning dastlabki bosqichlarida qo'llanilganda eng samarali hisoblanadi. Ekinlarni birinchi ekishdan oldin yoki infektsiyadan keyin 2 kundan kechiktirmasdan amalga oshiriladi, keyingi davolash 7-14 kun oralig'ida amalga oshiriladi.",
+                "createdAt": "2025-12-26T08:35:41.655Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "116223e1-2bf5-4365-96da-5262b1900d93",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:42:09.109Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "1e8c3b52-f4d4-43b2-bfe2-e393152579d3",
+                "name": "ЦИМОПРО 76 % Н.К. ",
+                "description": "Контакт ва қисман системали фунгицид. Милдью, мева чириши, антракноз ва доғланишларга қарши юкори самарали, ўсимликларга зарар етказмайди, шароббоп йўналишидаги узумларда қўлланилганда махсулот (вино) таьмини ўзгартирмайди",
+                "createdAt": "2025-02-26T17:42:09.103Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "32a1d142-e856-4149-9bf7-404411358058",
+            "dose_min": "0.5",
+            "dose_max": "1",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:13:41.105Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "0af15a99-7f2c-4f1b-b752-3966bca4fcf8",
+                "name": "TRIC-MANCOZEB 80% WP (Tricyclazole18%+ Mancozeb 62% WP)",
+                "description": "TRIC-MANCOZEB 80% WP Бу тизимли ва контактли фунгициднинг ноёб бирикмасидир. Унинг тизимли қисми - бу махсус тизимли фунгицид бўлган Трисиклазол",
+                "createdAt": "2025-02-26T18:13:41.042Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4e360c30-4e79-4f18-9cd9-7a087259c078",
+            "dose_min": "1.5",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-04-08T08:39:44.350Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "34800d6f-8ed7-4390-959d-1209d372677b",
+                "name": "Xom Chem 85% n.kuk. (Copper oxychloride 850 kg/g)",
+                "description": "Keng turdagi o'simliklarda qo'llash mumkin. Mahsulot tarkibidagi mis va uning birikmalari o'simlikda zamburug' va bakteriyali kasalliklardan himoya qiladi. Bu mahsulotga boshqa turdagi fungitsid yoki insekstitsidlar qo'shib sepish taqiqlanadi.",
+                "createdAt": "2025-04-08T08:39:44.315Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "5e959d4a-cd0f-465f-8a43-5610b6b98639",
+            "dose_min": "0.6",
+            "dose_max": "0.6",
+            "type": "disease",
+            "createdAt": "2025-08-20T01:43:56.050Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "25e4c3bd-18cb-4d81-9c3c-05fbf60c3c1d",
+                "name": "Ukvadrio 25% (Azoksistrobin 250gr/l)",
+                "description": "Meva-sabzavot ekinlarini kompleks kasalliklardan himoya qilishda qo'llaniladigan preparat. Preparat o'z samarasini qo'llanilgandan 1 soat o'tib ko'rina boshlaydi. \n",
+                "createdAt": "2025-03-14T06:38:03.039Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "49a6f4e9-f209-46f6-9957-00d98c84efa4",
+            "dose_min": "0.5",
+            "dose_max": "0.8",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:43:58.460Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "81dc8d0f-36a2-42a9-af09-f2efb946fad9",
+                "name": "Five star 40% сус.к.",
+                "description": "Фунгицид икки таркибий қисмдан иборат мажмуавий препарат, ҳам ҳимоялаш, ҳам даволаш ва олдини олиш ҳусусиятига эга. ",
+                "createdAt": "2025-02-21T12:43:58.453Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "02132f16-9abf-46dc-946d-22959aa6788f",
+            "dose_min": "2.5",
+            "dose_max": "2.5",
+            "type": "disease",
+            "createdAt": "2025-03-14T06:38:06.530Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "ad11bbc3-f6fd-454e-a224-6b8327e19206",
+                "name": "РИДОСТАР 72% Н.К (Манкоцеп 640 г/кг + Металаксил 80 г/кг)",
+                "description": "Namlanuvchi kukun shaklda bo'lib, fitoftoroz, oidium, antraknoz kasallliklariga qarshi qo'llaniladi. ",
+                "createdAt": "2025-03-14T06:38:06.519Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "48604ff2-422d-4342-be2e-b4fb5d87d404",
+            "dose_min": "2.5",
+            "dose_max": "0.5",
+            "type": "disease",
+            "createdAt": "2025-10-27T04:45:56.282Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "abeff6c3-7ed0-4a54-92c0-e1daccc954a2",
+                "name": "SHIELD (Bachillus subtilis+Trichoderma harzianum)",
+                "description": "SHIELD, antagonistik zamburug'lar va bakterialar konsorsiumi bo'lib, o'simlikni tuproq bilan yuqadigan kasalliklardan himoya qiladi. O'simlikda kasallik belgilari paydo bo'lganda 1ga maydonga 100 l dan 500 l gacha suvga turli ekinlarga berilgan miqdorda aralashtirib qo'llaniladi. Daraxtlarning har biriga berilgan miqdorda qo'llaniladi.",
+                "createdAt": "2025-02-26T19:12:39.494Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "733bc9b2-7b7e-4dc6-9c7e-3a72b3c4a693",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-03-06T07:08:55.453Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "27c75448-2cf2-422d-a461-49f83baa6484",
+                "name": "ЦИМОПРО 76 % Н.К. ",
+                "description": "Контакт ва қисман системали фунгицид. Милдью, мева чириши, антракноз ва доғланишларга қарши юкори самарали, ўсимликларга зарар етказмайди, шароббоп йўналишидаги узумларда қўлланилганда махсулот (вино) таьмини ўзгартирмайди",
+                "createdAt": "2025-03-06T07:08:55.448Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "64ee799e-d944-4a78-9370-c29b4c21873e",
+            "dose_min": "2.5",
+            "dose_max": "3",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:17:06.750Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "272e8fcb-2b5b-403d-9cd8-7a2c5226bd92",
+                "name": "ТАЛАНТ 500 гл сус.к. (Xlorotalonil, 500 g/l)",
+                "description": "Talant kartoshka va pomidorning asosiy kasalliklariga qarshi ishlatiladigan kontakt ta'sirli ximoyalovchi fungisiddir.",
+                "createdAt": "2025-02-26T18:17:06.744Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "48e0a7d3-fb39-4299-a99a-1ace751b940c",
+            "dose_min": "0.4",
+            "dose_max": "0.6",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:38:55.047Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "f46b6b31-5582-47ef-89f6-58708b9eaa7a",
+                "name": "ГЕРОС С.К ",
+                "description": "Контакт, системали ва трансламинар таьсирли фунгицид. Замбруғли касалликларни бошланғич босқичида юқори самара беради. Профилактик ва даволаш хусусиятига эга фунгицид.",
+                "createdAt": "2025-02-26T17:38:55.041Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4fd00fb2-e50a-4492-8491-b50242c2595a",
+            "dose_min": "2.5",
+            "dose_max": "2.5",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:18:16.849Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "bc923ad3-3186-4043-a548-2e37933783e9",
+                "name": "МЕТАКСИЛ СП н.кук. (Mankotseb, 640 g/kg+metalaksil, 80 g/kg) ",
+                "description": "Metaksil oldini oluvchi, davolovchi va qirib bitiruvchi, kontakt-sistemali ta'sirlarni namoyon qiladi. ",
+                "createdAt": "2025-02-26T18:18:16.836Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "2a58d678-2d15-4ca8-9e6b-a11648631dcc",
+            "dose_min": "1.5",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T18:19:08.311Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "4d4d0fa6-6f2e-400d-a666-df7179914f0b",
+                "name": "АЛЬЕТТ 80% с.д.г. (Fosetil alyuminiy)",
+                "description": "Qishloq, xo'jalik ekinlarida oomitsed zamburug'lar va bakteriyalar qo'zg'atadigan kasalliklarga  qarshi ishlatiladigan tizimli ta'sir qiluvchi fungisid",
+                "createdAt": "2025-02-26T18:19:08.300Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1a7e1166-974e-4390-ae90-087ec4ee7f2c",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2026-01-05T04:28:00.575Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "16125c97-7187-4073-bd53-e71884e88765",
+                "name": "Orgamica F",
+                "description": "Biofungitsid zamburug'li va bakterial patogenlarga qarshi keng ta'sir doirasiga ega. O'sishni tartibga soluvchi, sovuqqa chidamli bo'lib, zamburug' o'sishini va rivojlanishini to'xtadi. O'simlik ildizida butun o'suv davrida, bargi va poyasida 10-15 kungacha ta'sir etadi. Ildiz chirish, gommoz kasalliklarida urug'ni dorilab ekish tavsiya etiladi.",
+                "createdAt": "2026-01-05T03:15:04.981Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "6d1503f1-d519-4748-a996-b61bc2eb30d0",
+            "dose_min": "4",
+            "dose_max": "4",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:33:55.742Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "eaa59686-81d4-433a-baac-04eaa03208ca",
+                "name": "KUPROFIKS (Манкоцеб, 200 г/кг, + сульфат меди 57,7 г/кг + цимонаксил 24 г/кг)",
+                "description": "Картошка, помидор, узумдаги комплекс касалликларга қарши қўлланиладиган уч таркибли юқори самарали фунгицид",
+                "createdAt": "2025-02-21T12:33:55.700Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "1fc50757-8873-44ec-aba0-51eb938fedc8",
+            "dose_min": "100",
+            "dose_max": "200",
+            "type": "disease",
+            "createdAt": "2025-07-15T06:44:02.418Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "7e1c0826-e85a-4af2-9231-cdc2b44952b5",
+                "name": "Sporagin (bacillus subtilis-1x109 s/ml)",
+                "description": "Ekologik toza hosil olish, 3-5 kun ichida zamburug' va bakterial mikroorganizmlarning o'sishi va rivojlanishini bostirish, o'simliklarni davolash va tiklashda ishlatiladi. 10 litr suvga tayyorlanadi va bargdan purkaladi.",
+                "createdAt": "2025-07-15T06:44:00.072Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "645e6b70-f3de-4d52-b526-fd8ebac6e533",
+            "dose_min": "1",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-26T19:23:54.776Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "f4429766-5d35-4411-ab0b-df0491e002c2",
+                "name": "CAPTAN\tWP (Kaptan 50%) ",
+                "description": "Zamburug' kasalliklarga qarshi samarali fungusid. ",
+                "createdAt": "2025-02-26T19:23:54.739Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "3acd2061-9910-481d-b720-0a81de35d4ec",
+            "dose_min": "1.2",
+            "dose_max": "1.6",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:33:03.833Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "96f628d0-4f0c-4045-bb0f-d955d9856a4c",
+                "name": "PENKOZEB (Манкоцеб, 800 г/кг)",
+                "description": "Картошка, помидор, узумни касалликлардан ҳимоя қилиш учун мўлжалланган, таркибида микроэлементлар мавжуд бўлган янги формадаги кенг доирали текканда таъсир этувчи фунгицид.",
+                "createdAt": "2025-02-21T12:33:03.805Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "4cddccd7-a975-4467-91a2-18e3ccc78a4b",
+            "dose_min": "1",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-11-18T00:02:01.325Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "85979f66-0b45-4a0c-9cd9-dd239d68fe17",
+                "name": "EURO-ZIRAM (Зирам 800 г/кг)",
+                "description": "Ун шудринг, мильдю ва антракнозга қарши юқори самарали фунгицид",
+                "createdAt": "2025-02-20T11:23:40.004Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "665e505e-38c9-4e33-a3ce-21146e1cf138",
+            "dose_min": "5",
+            "dose_max": "6",
+            "type": "disease",
+            "createdAt": "2025-10-14T06:15:25.257Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "198b3718-0b7c-4686-9b29-8ffd86a33871",
+                "name": "КУМИР 345 г/л сус.к. (Uch-asosli mis sulfati, 345 g/l)",
+                "description": "Ishlovning samarasi eng yuqori bo'lishi uchun Kumir preparatini o'simliklar kasallik bilan zararlanishidan oldin qo'llash lozim. Kumir tarkibida mis bo'lgan noyob, yuqori samarali fungisid bo'lib, fitoftoroz, soxta un-shudring, alternarioz, mildyu, kalmaraz va monoliozda tavsiya qilinadi.",
+                "createdAt": "2025-02-26T18:18:29.837Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "3bb3e03c-d94f-40d3-b03f-5fb56ddb7bba",
+            "dose_min": "1.5",
+            "dose_max": "2",
+            "type": "disease",
+            "createdAt": "2025-02-26T17:41:11.419Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "fc34b45e-e45b-4b36-8ba3-b760d1ebc8b8",
+                "name": "НИКАРДЕН 70 % С.Э.Г ",
+                "description": "Контакт фунгицид, тез ва узок таьсир килади, ёмғирга чидамли, мильдью,мева чириши, антракноз ва доғланишларга қарши юқори самарали. Ўсимликларга зарар етказмайди, шароббоп йўналишидаги узумларда қўлланилганда махсулот (вино) таьмини ўзгартирмайди",
+                "createdAt": "2025-02-26T17:41:11.354Z"
+            },
+            "weeds": []
+        },
+        {
+            "id": "0c4f2883-62af-4ffa-b215-308bb49176c6",
+            "dose_min": "1",
+            "dose_max": "1.5",
+            "type": "disease",
+            "createdAt": "2025-02-21T12:43:38.699Z",
+            "disease": {
+                "id": "c9931bbf-cd37-4167-be35-2a600c6b2ea7",
+                "name": "Pomidor fitoftorozi",
+                "description": "Fitoftoroz, ya’ni mevaning qo‘ngir  chirish kasalligini Peronosporales tartibi, Oomitsetlar sinfiga mansub Phytophora infestans d By. zamburug‘i keltirib chiqaradi.Kasallik bargda, poyada va mevada namoyon bo‘ladi. Barglarning qirrasida qo‘ng‘ir rangdagi dog‘lar paydo bo‘lib, orqa tomonida oqish rangdagi zamburug‘ sporalari yetiladi. Barg bandida, poyada qo‘ng‘ir dog‘lar paydo bo‘ladi. Mevada turli davrlarda qo‘ng‘ir dog‘lar uning chirishiga sabab bo‘ladi. Nam sharoitda dog‘lardagi zamburug‘ sporasi rivojlanib, mevani zararlaydi.",
+                "biology_name": "Phytophora infestans d By. ",
+                "createdAt": "2023-09-12T05:51:17.699Z"
+            },
+            "drug": {
+                "id": "9ccbc256-dc7f-4f9f-8412-f5ee2fc6c8f2",
+                "name": "Copside plus 50% c.э.к.",
+                "description": "Бактериал куйиш клястероспориоз милдю, антракноз ва бошқа турдаги замбруғли касалликларга қарши қўлланиладиган фунгицид бактерицид.",
+                "createdAt": "2025-02-21T12:43:38.651Z"
+            },
+            "weeds": []
+        }
+    ],
+    "total": 119
+}
