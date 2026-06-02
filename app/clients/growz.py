@@ -89,7 +89,7 @@ class GrowzApiClient:
         return records
 
     async def _get(self, url: str, params: dict[str, Any]) -> dict[str, Any]:
-        headers = {"token": self.token or ""}
+        headers = {"x-api-key": self.token or ""}
 
         attempt = 0
         while True:
