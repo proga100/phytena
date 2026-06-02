@@ -16,6 +16,26 @@ from app.config import get_settings
 from app.clients.embeddings import EmbeddingsClient
 from app.models import Base, KbSource, KbDocument, KbChunk
 
+
+def extract_chunks(file_path: Path) -> list[str]:
+    """Extract text chunks from a document.
+
+    Plain-text files (.txt) use a fast path: read directly and split on blank
+    lines. All other formats are parsed and chunked via Docling.
+    """
+    if file_path.suffix.lower() == ".txt":
+        with open(file_path, "r", encoding="utf-8") as f:
+            content = f.read()
+        return [p.strip() for p in content.split("\n\n") if p.strip()]
+
+    from docling.chunking import HybridChunker
+    from docling.document_converter import DocumentConverter
+
+    doc = DocumentConverter().convert(str(file_path)).document
+    chunker = HybridChunker()
+    return [chunk.text for chunk in chunker.chunk(dl_doc=doc) if chunk.text.strip()]
+
+
 async def ingest_file(file_path: Path, crop: str | None = None, topic: str | None = None):
     settings = get_settings()
     if not settings.gemini_api_key:
@@ -26,11 +46,7 @@ async def ingest_file(file_path: Path, crop: str | None = None, topic: str | Non
     async_session = sessionmaker(engine, class_=AsyncSession, expire_on_commit=False)
 
     print(f"Reading file: {file_path}")
-    with open(file_path, "r", encoding="utf-8") as f:
-        content = f.read()
-
-    # Simple chunking by paragraphs (can be improved later)
-    paragraphs = [p.strip() for p in content.split("\n\n") if p.strip()]
+    paragraphs = extract_chunks(file_path)
     print(f"Split into {len(paragraphs)} chunks.")
 
     embed_client = EmbeddingsClient(api_key=settings.gemini_api_key, model=settings.embeddings_model)
