@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import asyncio
 import json
 import re
 from dataclasses import dataclass
@@ -30,13 +31,46 @@ class GeminiClient:
         *,
         api_key: str,
         model: str,
-        timeout_seconds: float = 45.0,
+        timeout_seconds: float = 90.0,
+        max_retries: int = 3,
         http_client: httpx.AsyncClient | None = None,
     ) -> None:
         self.api_key = api_key
         self.model = model
         self.timeout_seconds = timeout_seconds
+        self.max_retries = max_retries
         self.http_client = http_client
+
+    async def _post_with_retry(self, url: str, params: dict, payload: dict) -> httpx.Response:
+        """POST with retry on read-timeout, 429, and 5xx so a slow or rate-limited
+        generation doesn't fail the request outright.
+        """
+        attempt = 0
+        while True:
+            try:
+                if self.http_client is not None:
+                    response = await self.http_client.post(url, params=params, json=payload)
+                else:
+                    async with httpx.AsyncClient(timeout=self.timeout_seconds) as client:
+                        response = await client.post(url, params=params, json=payload)
+            except (httpx.TimeoutException, httpx.TransportError) as exc:
+                if attempt >= self.max_retries:
+                    raise GeminiClientError(f"Gemini API request failed after retries: {exc}") from exc
+                backoff = min(2.0 * 2**attempt, 30.0)
+                logger.warning(f"Gemini API {type(exc).__name__}; retry {attempt + 1}/{self.max_retries} after {backoff:.0f}s")
+                await asyncio.sleep(backoff)
+                attempt += 1
+                continue
+
+            if response.status_code == 429 or response.status_code >= 500:
+                if attempt >= self.max_retries:
+                    return response
+                backoff = min(2.0 * 2**attempt, 30.0)
+                logger.warning(f"Gemini API {response.status_code}; retry {attempt + 1}/{self.max_retries} after {backoff:.0f}s")
+                await asyncio.sleep(backoff)
+                attempt += 1
+                continue
+            return response
 
     async def generate_structured_answer(
         self,
@@ -69,11 +103,7 @@ class GeminiClient:
         }
         params = {"key": self.api_key}
 
-        if self.http_client is not None:
-            response = await self.http_client.post(url, params=params, json=payload)
-        else:
-            async with httpx.AsyncClient(timeout=self.timeout_seconds) as client:
-                response = await client.post(url, params=params, json=payload)
+        response = await self._post_with_retry(url, params, payload)
 
         if response.status_code >= 400:
             logger.error(f"Gemini API HTTP Error {response.status_code}: {response.text}")
