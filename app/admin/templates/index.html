@@ -43,7 +43,9 @@
 
       .playground {
         display: grid;
-        grid-template-columns: 400px 1fr;
+        /* minmax(0, 1fr) lets the results column shrink instead of overflowing the
+           window when it contains long unbreakable words. */
+        grid-template-columns: 400px minmax(0, 1fr);
         gap: 32px;
         align-items: start;
       }
@@ -137,7 +139,13 @@
         border: 1px solid var(--border-color);
         padding: 24px;
         margin-bottom: 24px;
+        /* Contain long words/URLs so text never overflows the card or window. */
+        overflow-wrap: anywhere;
+        word-break: break-word;
+        min-width: 0;
       }
+      .result-card p, .result-card li, .result-card h3 { overflow-wrap: anywhere; }
+      .results-area { min-width: 0; }
       
       .badge {
         padding: 4px 10px;
