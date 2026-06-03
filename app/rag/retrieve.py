@@ -1,3 +1,5 @@
+import uuid
+
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
@@ -6,6 +8,34 @@ from app.config import get_settings
 from app.rag.normalize import NormalizedQuery, normalize_query_to_russian
 from app.rag.rrf import RankedCandidate, reciprocal_rank_fusion
 from app.schemas import RetrievalCandidate, RetrieveResponse
+
+
+async def fetch_treatments_for_diseases(
+    db: AsyncSession, rag_disease_ids: list[str], per_disease: int = 8
+) -> dict[str, list[dict]]:
+    """Fetch treatment options for retrieved diseases (the second step of the flow:
+    symptom -> disease -> treatments). Keyed by rag_disease_id.
+    """
+    if not rag_disease_ids:
+        return {}
+    ids = [uuid.UUID(i) for i in rag_disease_ids]
+    rows = await db.execute(
+        text("""
+            SELECT rag_disease_id, drug_name, drug_description, dose_min, dose_max, type
+            FROM rag_treatments
+            WHERE rag_disease_id = ANY(:ids) AND drug_name IS NOT NULL
+        """),
+        {"ids": ids},
+    )
+    out: dict[str, list[dict]] = {}
+    for did, drug, drug_desc, lo, hi, ttype in rows:
+        bucket = out.setdefault(str(did), [])
+        if len(bucket) >= per_disease:
+            continue
+        bucket.append(
+            {"drug": drug, "description": drug_desc, "dose_min": lo, "dose_max": hi, "type": ttype}
+        )
+    return out
 
 async def retrieve(
     query: str, 

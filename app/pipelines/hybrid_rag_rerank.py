@@ -44,10 +44,15 @@ class HybridRagRerankPipeline(Pipeline):
         # 1. Retrieval against the Growz Uzbek RAG DB (fetch more for reranking)
         from app.db import GrowzRagSessionLocal
 
+        from app.rag.retrieve import fetch_treatments_for_diseases
+        from app.pipelines.hybrid_rag import _build_context
+
         logger.info("Performing deep retrieval (top 15)...")
         async with GrowzRagSessionLocal() as db:
             # Get top 15 for reranking
             retrieval_response = await retrieve(request.question, db, language=request.context.language, top_k=15)
+            disease_ids = [c.chunk_id for c in retrieval_response.candidates]
+            treatments_by_disease = await fetch_treatments_for_diseases(db, disease_ids)
         
         if not retrieval_response.candidates:
             logger.info("No relevant chunks found in KB.")
@@ -76,7 +81,9 @@ class HybridRagRerankPipeline(Pipeline):
             # We provide ALL 15 candidates to Gemini and ask it to be EXTREMELY 
             # critical and pick only the most relevant ones for the final answer.
             
-            final_prompt = build_pipeline_b_prompt(request, [c.text_preview for c in retrieval_response.candidates])
+            final_prompt = build_pipeline_b_prompt(
+                request, _build_context(retrieval_response.candidates, treatments_by_disease)
+            )
             final_prompt = final_prompt.replace(
                 "Answer the farmer's question", 
                 "Carefully evaluate ALL provided documents (up to 15 chunks). Filter out irrelevant noise, identify the most relevant facts, and answer the question"

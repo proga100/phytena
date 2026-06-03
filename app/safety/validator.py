@@ -5,6 +5,7 @@ from app.schemas import AssistantAnswer
 
 
 CHEMICAL_TERMS = (
+    # Russian
     "пестицид",
     "фунгицид",
     "инсектицид",
@@ -17,9 +18,20 @@ CHEMICAL_TERMS = (
     "ml/ha",
     "l/ha",
     "kg/ha",
+    # Uzbek (Latin)
+    "pestitsid",
+    "fungitsid",
+    "insektitsid",
+    "gerbitsid",
+    "preparat",
+    "doza",
+    "dozasida",
 )
 
-DOSAGE_PATTERN = re.compile(r"\b\d+(?:[.,]\d+)?\s*(?:л/га|кг/га|г/л|ml/ha|l/ha|kg/ha)\b", re.IGNORECASE)
+DOSAGE_PATTERN = re.compile(
+    r"\b\d+(?:[.,]\d+)?\s*(?:л/га|кг/га|г/л|ml/ha|l/ha|kg/ha|l/ga|kg/ga|g/l|doza)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
