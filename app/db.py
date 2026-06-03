@@ -15,6 +15,10 @@ settings = get_settings()
 engine = create_async_engine(settings.database_url, pool_pre_ping=True)
 AsyncSessionLocal = async_sessionmaker(engine, expire_on_commit=False)
 
+# Dedicated engine/session for the Growz Uzbek RAG DB (rag_diseases / rag_crops).
+growz_rag_engine = create_async_engine(settings.growz_rag_database_url, pool_pre_ping=True)
+GrowzRagSessionLocal = async_sessionmaker(growz_rag_engine, expire_on_commit=False)
+
 
 async def get_session() -> AsyncGenerator[AsyncSession, None]:
     async with AsyncSessionLocal() as session:

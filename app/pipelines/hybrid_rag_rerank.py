@@ -41,11 +41,11 @@ class HybridRagRerankPipeline(Pipeline):
             response.trace["image"] = image.trace()
             return response
 
-        # 1. Retrieval (Fetch more candidates for reranking)
-        from app.db import AsyncSessionLocal
-        
+        # 1. Retrieval against the Growz Uzbek RAG DB (fetch more for reranking)
+        from app.db import GrowzRagSessionLocal
+
         logger.info("Performing deep retrieval (top 15)...")
-        async with AsyncSessionLocal() as db:
+        async with GrowzRagSessionLocal() as db:
             # Get top 15 for reranking
             retrieval_response = await retrieve(request.question, db, language=request.context.language, top_k=15)
         

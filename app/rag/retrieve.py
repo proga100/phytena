@@ -16,27 +16,29 @@ async def retrieve(
     settings = get_settings()
     normalized = normalize_query_to_russian(query, language)
     
-    # 1. Vector Search
+    # 1. Vector Search. The Growz docs are Uzbek, so embed the original query text
+    # (not the Russian normalization) to keep the query in the same language space.
     embed_client = EmbeddingsClient(api_key=settings.gemini_api_key, model=settings.embeddings_model)
     query_vector = await embed_client.get_embedding(
-        normalized.normalized_ru, 
+        query,
         task_type="RETRIEVAL_QUERY",
         output_dimensionality=settings.embedding_dimension
     )
 
-    # Vector Query using pgvector (using <=> for cosine distance)
+    # Retrieval targets the Growz Uzbek disease docs (rag_diseases). The data is
+    # Uzbek, so FTS uses the 'simple' config (no Russian stemmer) and the query is
+    # matched against the original wording, not the Russian normalization.
     vector_stmt = text("""
         SELECT id, 1 - (embedding <=> :query_vector) as score
-        FROM kb_chunks
+        FROM rag_diseases
         ORDER BY embedding <=> :query_vector
         LIMIT :limit
     """)
-    
-    # Lexical Query (FTS) - use plainto_tsquery for simple phrases
+
     lexical_stmt = text("""
-        SELECT id, ts_rank_cd(fts_ru, plainto_tsquery('russian', :query_text)) as score
-        FROM kb_chunks
-        WHERE fts_ru @@ plainto_tsquery('russian', :query_text)
+        SELECT id, ts_rank_cd(fts, plainto_tsquery('simple', :query_text)) as score
+        FROM rag_diseases
+        WHERE fts @@ plainto_tsquery('simple', :query_text)
         ORDER BY score DESC
         LIMIT :limit
     """)
@@ -56,7 +58,7 @@ async def retrieve(
             for i, row in enumerate(vector_results)
         ]
 
-    lexical_results = await db.execute(lexical_stmt, {"query_text": normalized.normalized_ru, "limit": top_k * 2})
+    lexical_results = await db.execute(lexical_stmt, {"query_text": query, "limit": top_k * 2})
     lexical_candidates = [
         RankedCandidate(str(row[0]), i + 1, float(row[1])) 
         for i, row in enumerate(lexical_results)
@@ -76,7 +78,9 @@ async def retrieve(
         )
 
     chunk_ids = [m.chunk_id for m in merged]
-    chunk_stmt = text("SELECT id, text_ru, section_title, crop FROM kb_chunks WHERE id = ANY(:ids)")
+    chunk_stmt = text(
+        "SELECT id, search_text, disease_name, crop_name FROM rag_diseases WHERE id = ANY(:ids)"
+    )
     # Convert string IDs back to UUIDs
     import uuid
     uuid_ids = [uuid.UUID(cid) for cid in chunk_ids]

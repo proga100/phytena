@@ -41,11 +41,11 @@ class HybridRagPipeline(Pipeline):
             response.trace["image"] = image.trace()
             return response
 
-        # 1. Retrieval
-        from app.db import AsyncSessionLocal
-        
+        # 1. Retrieval against the Growz Uzbek RAG DB (rag_diseases).
+        from app.db import GrowzRagSessionLocal
+
         logger.info("Performing retrieval...")
-        async with AsyncSessionLocal() as db:
+        async with GrowzRagSessionLocal() as db:
             retrieval_response = await retrieve(request.question, db, language=request.context.language)
         
         context_chunks = [c.text_preview for c in retrieval_response.candidates]
