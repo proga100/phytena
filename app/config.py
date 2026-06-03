@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     database_url: str = "postgresql+asyncpg://agronomy:agronomy@127.0.0.1:5432/agronomy"
     sync_database_url: str = "postgresql+psycopg://agronomy:agronomy@127.0.0.1:5432/agronomy"
     growz_database_url: str = "postgresql+asyncpg://agronomy:agronomy@db:5432/growz"
+    growz_rag_database_url: str = "postgresql+asyncpg://agronomy:agronomy@db:5432/growz_rag"
     embedding_dimension: int = Field(default=768, ge=1)
     llm_provider: str = "google"
     llm_model: str = "gemini-2.5-flash"
