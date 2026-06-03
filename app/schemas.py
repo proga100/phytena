@@ -2,7 +2,23 @@ from enum import StrEnum
 from typing import Any
 from uuid import UUID
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
+
+
+def _action_to_str(item: Any) -> str:
+    """Coerce an action item to a string. The LLM sometimes returns structured
+    dicts (e.g. {"drug_name", "dose", "description"}) instead of a sentence;
+    flatten those into a readable line instead of failing validation.
+    """
+    if isinstance(item, str):
+        return item
+    if isinstance(item, dict):
+        name = item.get("drug_name") or item.get("name") or ""
+        dose = item.get("dose") or item.get("dosage") or ""
+        desc = item.get("description") or item.get("detail") or ""
+        parts = [str(p) for p in (name, dose, desc) if p]
+        return " — ".join(parts) if parts else str(item)
+    return str(item)
 
 
 class PipelineId(StrEnum):
@@ -35,6 +51,13 @@ class AssistantAnswer(BaseModel):
     needs_clarification: bool = False
     clarification_question: str | None = None
     escalate_to_agronomist: bool = False
+
+    @field_validator("actions", "warnings", mode="before")
+    @classmethod
+    def _coerce_str_list(cls, value: Any) -> Any:
+        if isinstance(value, list):
+            return [_action_to_str(v) for v in value]
+        return value
 
 
 class QueryContext(BaseModel):
